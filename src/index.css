@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("/fonts/Roobert-Regular.woff2") format("woff2"),
+    url("/fonts/Roobert-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("/fonts/Roobert-Bold.woff2") format("woff2"),
+    url("/fonts/Roobert-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Optional: Set a default font for the body */
+body {
+  overflow-x: hidden;
+  font-family: "Roobert", Arial, sans-serif; /* Fallback fonts */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(-50%); /* Move left by 50% of the total width */
+  }
+}
+
+.animate-slide {
+  animation: slide 35s linear infinite; /* Adjust duration for smoothness */
+  display: flex; /* Ensure items are in a row */
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateX(-180%);
+  }
+  50% {
+    transform: translateY(180%);
+  }
+  75% {
+    transform: translateX(180%);
+  }
+  100% {
+    transform: translateX(-180%);
+  }
+}
+
+.up-down-animation {
+  animation: upDown 30s ease-in-out infinite;
+}
+
+.animated-image {
+  position: absolute; /* Allows the image to animate */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the image perfectly */
+  width: 50%; /* Set width to 50% of the container */
+  height: auto; /* Maintain aspect ratio */
+  animation: moveImage 150s ease-in-out infinite; /* Animate the image */
+}
+
+@keyframes moveImage {
+  0% {
+    transform: translate(-50%, -50%); /* Start from the center */
+  }
+  50% {
+    transform: translate(50%, -50%); /* Move to the right */
+  }
+  100% {
+    transform: translate(-50%, -50%); /* Move back to the left */
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+
+  margin-bottom: 1.2rem;
+  padding: 0 0px; /* Add padding to the left and right to prevent hiding */
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+  overflow: visible; /* Ensure children are not cut off */
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  position: relative;
+  margin: 0 0px; /* Margin for spacing between cards */
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (min-width: 769px) {
+  .swiper-slide {
+    /* Set a fixed width for slides to control spacing better */
+    width: calc(33.33% - 20px); /* 3 cards with some spacing */
+    margin: 0; /* Set margin to zero for slides */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .swiper-slide {
+    margin: 0px 0px; /* Adjust margin for smaller screens */
+  }
+}
