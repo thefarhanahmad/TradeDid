@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa"; // Importing icons
 import { navData } from "../../../rawData";
 import Logo from "../../../assets/Logo.png";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -78,12 +79,14 @@ export const Navbar = () => {
     >
       <div className="flex justify-between md:justify-evenly  items-center w-[90%] mx-auto h-full">
         {/* Logo */}
-        <img
-          src={Logo}
-          width={150}
-          className="p-1 rounded cursor-pointer"
-          alt="Logo"
-        />
+        <Link to={"/"}>
+          <img
+            src={Logo}
+            width={150}
+            className="p-1 rounded cursor-pointer"
+            alt="Logo"
+          />
+        </Link>
 
         {/* Navigation Items */}
         <div
@@ -140,9 +143,12 @@ export const Navbar = () => {
 
         {/* Sign In Button */}
         <div>
-          <button className="bg-orange-500 hidden text-white font-semibold py-1 px-6 md:flex justify-center items-center rounded-full hover:bg-orange-600 transition duration-200">
+          <Link
+            to={"/auth/signup"}
+            className="bg-orange-500 hidden text-white font-semibold py-1 px-6 md:flex justify-center items-center rounded-full hover:bg-orange-600 transition duration-200"
+          >
             Sign in
-          </button>
+          </Link>
           {/* Hamburger Menu */}
           <div className="md:hidden">
             {/* Show on mobile only */}
