@@ -5,6 +5,8 @@ import { Navbar } from "../../Components/Layouts/Navbar/Navbar";
 import EnterpriseCommunication from "../../Components/Home/InterPriseSection";
 import Services from "../../Components/Home/Services";
 import Business from "../../Components/Home/Business";
+import Testimonial from "../../Components/Home/Testimonials";
+import PromoBanner from "../../Components/Home/LastSection";
 
 const HomePage = () => {
   return (
@@ -15,6 +17,8 @@ const HomePage = () => {
       <EnterpriseCommunication />
       <Services />
       <Business />
+      <Testimonial />
+      <PromoBanner />
     </div>
   );
 };
