@@ -5,7 +5,7 @@ export default function Testimonial() {
       company: "C3ntro Telecom",
       position: "Carrier Interconnection Manager",
       testimonial:
-        "\"Always with the best disposition to serve us. DIDWW has helped us in fulfilling our customer's needs, when it comes to provide them with the numbering solutions, when most of the time the requests get to us as urgent ones. Apart from everything else, it's also fun and easy to work with DIDWW.\"",
+        "\"Always with the best disposition to serve us. TRADEDID has helped us in fulfilling our customer's needs, when it comes to provide them with the numbering solutions, when most of the time the requests get to us as urgent ones. Apart from everything else, it's also fun and easy to work with TRADEDID.\"",
       logo: "https://www.didww.com/_next/static/media/c3ntro.ea6c7bc9.png",
     },
     {
@@ -21,7 +21,7 @@ export default function Testimonial() {
       company: "Nectar Desk Inc.",
       position: "CEO",
       testimonial:
-        '"Virtual numbers and Phone Systems are essential parts of our offering, therefore DIDWW is one of the key components in our infrastructure. They have great support and high quality service. We became a client of DIDWW when we were very small, but still were treated in a proper way and were able to discuss business conditions, which helped our growth."',
+        '"Virtual numbers and Phone Systems are essential parts of our offering, therefore TRADEDID is one of the key components in our infrastructure. They have great support and high quality service. We became a client of TRADEDID when we were very small, but still were treated in a proper way and were able to discuss business conditions, which helped our growth."',
       logo: "https://www.didww.com/_next/static/media/nectar-desk.aaaef7b2.png",
     },
   ];

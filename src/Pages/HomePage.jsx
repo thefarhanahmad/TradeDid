@@ -7,6 +7,7 @@ import Services from "../Components/Home/Services";
 import Business from "../Components/Home/Business";
 import Testimonial from "../Components/Home/Testimonials";
 import PromoBanner from "../Components/Home/LastSection";
+import ImageAnimation from "../Components/Home/ImageAnimation";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,9 @@ const HomePage = () => {
       <TopSection />
 
       <SecondSection />
+
+      {/* Image animation */}
+      <ImageAnimation />
       <EnterpriseCommunication />
       <Services />
       <Business />

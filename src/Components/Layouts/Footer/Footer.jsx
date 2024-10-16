@@ -15,7 +15,7 @@ export const Footer = () => {
             {/* Left Section */}
             <div className="mb-6 text-center  md:mb-0 flex flex-col justify-center items-center">
               <h3 className="text-lg font-bold text-center text-gray-800 mb-2">
-                Join the <span className="text-orange-500 ">DIDWW</span>{" "}
+                Join the <span className="text-orange-500 ">TRADEDID</span>{" "}
                 community
               </h3>
               <p className="text-gray-600 mb-4">
@@ -111,7 +111,7 @@ export const Footer = () => {
       <div className=" w-full overflow-x-hidden bg-[#023f7f] py-4">
         <div className="flex w-[80%] mx-auto text-center flex-col-reverse  text-white  md:flex-row justify-between items-center">
           <div>
-            Copyright © 2024 DIDWW Ireland Limited. All rights reserved.
+            Copyright © 2024 TRADEDID Ireland Limited. All rights reserved.
           </div>
           <div className="flex gap-9">
             <img src="https://www.didww.com/images/footer/CFCA.svg" alt="img" />

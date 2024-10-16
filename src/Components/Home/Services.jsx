@@ -1,5 +1,6 @@
 import Blob from "../../assets/blob.png";
 import bg from "../../assets/bg-service.svg";
+
 import ServiceCard from "./ServiceCard";
 
 const Services = () => {
@@ -55,7 +56,7 @@ const Services = () => {
     {
       title: "Outbound SIP Trunk",
       description:
-        "A highly scalable and flexible SIP trunking solution for cost-efficient calling with the highest level of audio quality using DIDWW local and global VoIP termination routes.",
+        "A highly scalable and flexible SIP trunking solution for cost-efficient calling with the highest level of audio quality using TRADEDID local and global VoIP termination routes.",
     },
   ];
 
@@ -101,7 +102,7 @@ const Services = () => {
     {
       title: "Phone Number Portability Globally",
       description:
-        "Wide porting coverage for the seamless migration of your numbers to DIDWW free of charge.",
+        "Wide porting coverage for the seamless migration of your numbers to TRADEDID free of charge.",
     },
   ];
 

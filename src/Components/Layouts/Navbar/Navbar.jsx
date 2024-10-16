@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa"; // Importing icons
 import { navData } from "../../../rawData";
 import Logo from "../../../assets/Logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isScrolledPastTop, setIsScrolledPastTop] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State for mobile menu
-
+  const location = useLocation;
   // Create a ref for the mobile menu
   const mobileMenuRef = useRef(null);
 
@@ -18,6 +18,11 @@ export const Navbar = () => {
 
   const handleMouseLeave = () => {
     setOpenDropdown(null);
+  };
+
+  const handleLinkClick = () => {
+    setOpenDropdown(null); // Close the dropdown after clicking a link
+    setIsMobileMenuOpen(false); // Close the mobile menu as well
   };
 
   const toggleMobileMenu = () => {
@@ -77,7 +82,7 @@ export const Navbar = () => {
       }`}
       style={{ height: "80px", paddingBottom: "10px" }} // Keep padding consistent
     >
-      <div className="flex justify-between md:justify-evenly  items-center w-[90%] mx-auto h-full">
+      <div className="flex justify-between md:justify-evenly items-center w-[90%] mx-auto h-full">
         {/* Logo */}
         <Link to={"/"}>
           <img
@@ -93,7 +98,7 @@ export const Navbar = () => {
           ref={mobileMenuRef} // Attach the ref here
           className={`gap-7 text-[#023f7f] font-sans ${
             isMobileMenuOpen
-              ? "flex-col absolute flex justify-center   items-center bg-white shadow-lg w-full top-[80px] py-10 left-0 z-40"
+              ? "flex-col absolute flex justify-center items-center bg-white shadow-lg w-full top-[80px] py-10 left-0 z-40"
               : "hidden md:flex"
           }`}
         >
@@ -121,24 +126,34 @@ export const Navbar = () => {
 
               {/* Dropdown Menu */}
               <div
-                className={`absolute  md:-left-6 -left-20 z-50 top-full mt-4 w-64 p-6 bg-white rounded-2xl shadow-lg transition-all duration-300 transform origin-top ${
+                className={`absolute md:-left-6 -left-20 z-50 top-full mt-4 w-64 p-6 bg-white rounded-2xl shadow-lg transition-all duration-300 transform origin-top ${
                   openDropdown === index
                     ? "scale-y-100 opacity-100"
                     : "scale-y-0 opacity-0"
                 }`}
               >
                 {menu.items.map((item, i) => (
-                  <a
+                  <Link
                     key={i}
-                    href="#"
+                    to={item?.url}
                     className="block px-4 py-2 text-[#023f7f] hover:opacity-85 transition duration-200"
+                    onClick={handleLinkClick} // Close dropdown and mobile menu on click
                   >
-                    {item}
-                  </a>
+                    {item?.text}
+                  </Link>
                 ))}
               </div>
             </div>
           ))}
+
+          {/* Sign Up Button for Mobile View */}
+          <Link
+            to={"/auth/signup"}
+            className="bg-orange-500 text-white font-semibold py-1 px-6 flex md:hidden justify-center items-center rounded-full hover:bg-orange-600 transition duration-200 mt-4"
+            onClick={handleLinkClick} // Close the mobile menu on click
+          >
+            Sign Up
+          </Link>
         </div>
 
         {/* Sign In Button */}

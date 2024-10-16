@@ -42,7 +42,7 @@ const Business = () => {
         />
         <h1 className="text-4xl text-black z-10  text-center">
           <span className="text-[#023f7f]">Discover</span> how to grow your
-          business with DIDWW use cases
+          business with TRADEDID use cases
         </h1>
       </div>
 

@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import linkBg from "../../assets/link-bg.jpg";
 
 // Import required modules
 import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper/modules";
@@ -41,10 +42,15 @@ const BusinessCard = ({ data, heading }) => {
       >
         {data.map((item, i) => (
           <SwiperSlide key={i}>
-            <div className="w-full h-56 p-5 mb-2  flex  items-center justify-center">
-              <span className="text-lg rounded-md overflow-hidden w-[90%] h-full relative cursor-pointer flex justify-center group bg-white items-center font-semibold">
+            <div className="w-full h-56 p-5   mb-2 px-8 flex  items-center justify-center">
+              <span
+                style={{
+                  backgroundImage: `url(${linkBg})`,
+                }}
+                className="text-lg  p-5 rounded-md border border-[#7fb2ea] overflow-hidden w-[92%] h-full relative cursor-pointer flex justify-center group bg-white items-center font-semibold"
+              >
                 {item}
-                <span className="w-full bg-sky-100 text-[#023f7f] absolute text-center -bottom-12 py-2 group-hover:bottom-0 transition-all duration-200">
+                <span className="w-full bg-sky-200 text-[#023f7f] absolute text-center -bottom-12 py-2 group-hover:bottom-0 transition-all duration-200">
                   Learn More
                 </span>
               </span>

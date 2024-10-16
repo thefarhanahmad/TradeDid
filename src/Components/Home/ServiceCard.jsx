@@ -1,4 +1,5 @@
 import React from "react";
+import serviceBg from "../../assets/service-card.jpg";
 
 const ServiceCard = ({ heading, data }) => {
   return (
@@ -11,12 +12,15 @@ const ServiceCard = ({ heading, data }) => {
           {data.map((item, index) => (
             <div
               key={index}
-              className="relative bg-white border border-cyan-200 text-black rounded-lg p-6 overflow-hidden transition-transform duration-300 hover:scale-105 group"
+              style={{
+                backgroundImage: `url(${serviceBg})`,
+              }}
+              className="relative h-[200px] border border-cyan-200 text-black rounded-lg p-6 overflow-hidden transition-transform duration-300 hover:scale-[1.02] group"
             >
               {/* Background animation using absolute positioning */}
-              <div className="absolute inset-0 bg-gradient-to-t from-cyan-300 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-cyan-200 group-hover:shadow-md to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
 
-              <div className="relative z-10">
+              <div className="relative z-10 ">
                 <h2 className="text-xl font-semibold mb-4">{item.title}</h2>
                 <p>{item.description}</p>
               </div>

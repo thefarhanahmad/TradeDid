@@ -40,11 +40,11 @@ const RegisterForm = () => {
         <div className="flex items-center mb-4">
           <input type="checkbox" className="mr-2" />
           <label>
-            I have read and accept the DIDWW{" "}
+            I have read and accept the TRADEDID{" "}
             <a href="#" className="text-[#023f7f]">
               Terms & Agreements
             </a>{" "}
-            and the DIDWW{" "}
+            and the TRADEDID{" "}
             <a href="#" className="text-[#023f7f]">
               Privacy Notice
             </a>

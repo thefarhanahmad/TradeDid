@@ -105,6 +105,38 @@ body {
   margin: 0 0px; /* Margin for spacing between cards */
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #bbd3ee; /* Change to your preferred color */
+  border: 1px solid #6ba7ec;
+  border-radius: 50%; /* Makes the button perfectly circular */
+  color: #023f7f; /* Sets icon color */
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-30%); Adjusts for vertical centering */
+  cursor: pointer;
+  z-index: 40; /* Ensures buttons appear on top */
+  width: 40px; /* Fixed width for a circular shape */
+  height: 40px; /* Fixed height for a circular shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Control icon size using font-size in a child selector */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px; /* Set the icon size */
+}
+
+.swiper-button-prev {
+  left: 0px; /* Adjust position as needed */
+}
+
+.swiper-button-next {
+  right: 0px; /* Adjust position as needed */
+}
+
 .swiper-slide img {
   display: block;
   width: 100%;

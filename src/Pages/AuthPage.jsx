@@ -9,11 +9,12 @@ const AuthPage = () => {
     <div className="flex min-h-screen pt-16">
       <div className="bg-[#023f7f] w-[60%] md:flex hidden justify-center items-center">
         <div className="text-center text-white">
-          <h1 className="text-5xl font-bold">DIDWW</h1>
+          <h1 className="text-5xl font-bold">TRADEDID'S</h1>
           <p className="mt-2">Remove the boundaries</p>
         </div>
       </div>
-      <div className=" min-h-full w-[90%] mx-auto md:w-[40%]">
+
+      <div className=" min-h-full w-[100%] px-32 md:px-0 mx-auto md:w-[40%] bg-[#e6f9ff]">
         {/* buttons */}
         <div className=" flex justify-evenly pt-5 mb-5">
           <Link
@@ -39,7 +40,7 @@ const AuthPage = () => {
         </div>
 
         {/* form */}
-        <div className="h-full pt-6 p-2 md:p-8">
+        <div className=" h-full pt-6 p-2 md:p-8">
           <Outlet />
         </div>
       </div>

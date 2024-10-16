@@ -7,7 +7,7 @@ export default function SecondSection() {
         <header className="text-center mb-20">
           <h1 className="text-3xl font-bold mb-4 text-[#023f7f]">
             <span>Why do customers choose</span>
-            <span className="text-orange-500 mx-2">DIDWW</span>?
+            <span className="text-orange-500 mx-2">TRADEDID</span>?
           </h1>
           <p className="text-2xl text-[#023f7f]">
             The VoIP platform for telecommunication and business professionals
@@ -80,13 +80,10 @@ export default function SecondSection() {
         <header className="text-center mt-20">
           <h1 className="text-3xl font-bold mb-4 text-[#023f7f]">
             Over <span className="text-orange-500 mx-2">1000</span> industry
-            leaders rely on DIDWW
+            leaders rely on TRADEDID
           </h1>
         </header>
       </div>
-
-      {/* Image animation */}
-      <ImageAnimation />
     </div>
   );
 }
