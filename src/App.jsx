@@ -15,6 +15,14 @@ import MobileNumbers from "./Pages/MobileNumbers";
 import ShareCostNumbers from "./Pages/SharedCostNumbers";
 import AllServices from "./Pages/AllServices";
 import SipServices from "./Pages/SipServices";
+import TwoWaySms from "./Pages/TwoWaySip";
+import Capacity from "./Pages/Capacity";
+import EmergencyCalling from "./Pages/EmergencyCalling";
+import PhoneNumberPorting from "./Pages/PhoneNumberPorting";
+import ForwardSMSDelivery from "./Pages/ForwardingSMSDelivery";
+import FaxPage from "./Pages/FaxPage";
+import AllTools from "./Pages/AllTools";
+import SelfService from "./Pages/SelfService";
 
 function App() {
   return (
@@ -60,6 +68,25 @@ function App() {
           path="/services/two-way-sip-trunking"
           element={<SipServices />}
         />
+        <Route path="/services/two-way-sms" element={<TwoWaySms />} />
+        <Route path="/services/capacity" element={<Capacity />} />
+        <Route
+          path="/services/emergency-calling"
+          element={<EmergencyCalling />}
+        />
+        <Route
+          path="/services/phone-number-porting"
+          element={<PhoneNumberPorting />}
+        />
+        <Route
+          path="/services/voice-forwarding-sms"
+          element={<ForwardSMSDelivery />}
+        />
+        <Route path="/services/fax" element={<FaxPage />} />
+
+        {/* Tools */}
+        <Route path="/tools/all-tools" element={<AllTools />} />
+        <Route path="/tools/self-service-portal" element={<SelfService />} />
       </Routes>
       <Footer />
     </div>

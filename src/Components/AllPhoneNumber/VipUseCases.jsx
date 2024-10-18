@@ -3,8 +3,8 @@ import hpGrl from "../../assets/happyGirl.png";
 
 const VoIPUseCases = ({ subHeading, data }) => {
   return (
-    <div className="bg-gray-50  flex items-center justify-center p-4">
-      <div className=" shadow-lg rounded-lg p-6 max-w-5xl w-full">
+    <div className=" from-yellow-50 to-orange-50 flex items-center justify-center p-4">
+      <div className=" shadow-lg bg-gray-50 rounded-lg p-6 max-w-5xl w-full">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-2/3">
             <div className="">

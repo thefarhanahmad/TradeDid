@@ -22,7 +22,7 @@ export const navData = [
     items: [
       { text: "All Services", url: "/services/all-services" },
       { text: "Two-Way SIP Trunking", url: "/services/two-way-sip-trunking" },
-      { text: "Two-Way", url: "/services/two-way" },
+      { text: "Two-Way", url: "/services/two-way-sms" },
       { text: "Capacity", url: "/services/capacity" },
       { text: "Emergency Calling", url: "/services/emergency-calling" },
       { text: "Phone Number Porting", url: "/services/phone-number-porting" },

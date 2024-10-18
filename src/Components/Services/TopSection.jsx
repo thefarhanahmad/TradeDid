@@ -1,13 +1,17 @@
 import React from "react";
 import map from "../../assets/map.png";
 
-const TopSection = ({ preText, spanText, nextText, subheading, bg }) => {
+const TopSection = ({ preText, spanText, nextText, subheading, bgImg }) => {
   return (
     <div
-      className="w-full relative bg-cover bg-center  md:h-screen overflow-hidden"
+      className="w-full relative bg-cover bg-center md:h-screen  h-[80vh] overflow-hidden"
       style={{
-        backgroundImage:
-          "url(https://www.didww.com/_next/static/media/main.df943cbd.webp)",
+        backgroundImage: `url(${
+          bgImg
+            ? bgImg
+            : "https://www.didww.com/_next/static/media/main.df943cbd.webp"
+        })`,
+
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

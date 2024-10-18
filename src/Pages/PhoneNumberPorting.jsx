@@ -9,63 +9,59 @@ import HoverBoxes from "../Components/AllPhoneNumber/HoverBoxes";
 import PromoBanner from "../Components/Home/LastSection";
 import TopSection from "../Components/Services/TopSection";
 import SIPTrunking from "../Components/Services/SipTrunks";
+import SMSIntegration from "../Components/Services/SMSIntegration";
+import QuoteRequest from "../Components/Services/QuoteRequest";
+import DIDPlusZero from "../Components/Services/DIDplusZero";
+import BigLaptop from "../Components/Services/BigLaptop";
+import Helicopter from "../Components/Services/Helicopter";
 
-const SipServices = () => {
-  const cardData = [
-    {
-      title: "Quality SIP Trunks",
-      description:
-        "SIP traffic delivered via TRADEDID high-capacity platform, for excellent audio quality and rock-solid reliability to maintain a high ASR and ACD.",
-    },
-    {
-      title: "Scalable VoIP Network",
-      description:
-        "Virtually unlimited call Capacity and advanced trunk configurations to support the specific communication needs of operators and enterprises.",
-    },
-    {
-      title: "Wholesale VoIP Termination",
-      description:
-        "A valuable addition to the VoIP service portfolio of a wholesale SIP Trunking provider.",
-    },
-    {
-      title: "API Integration",
-      description:
-        "Remote trunk management via a REST API with real-time call event streaming.",
-    },
-    {
-      title: "PSTN Replacement",
-      description:
-        "Cost saving and innovative cloud-based solution to replace traditional telephony with VoIP SIP Trunks at competitive global rates.",
-    },
-    {
-      title: "Advanced Online Monitoring",
-      description:
-        "Flexible SIP Trunk settings, monitoring tools, and CDRs generated on a per SIP trunk basis.",
-    },
-    {
-      title: "Live Support",
-      description:
-        "Highly professional, customer-oriented network operations and customer support teams available on a 24/7/365 basis.",
-    },
-  ];
-
+const PhoneNumberPorting = () => {
   const texts = {
-    beforeText: "Why do customers choose the TRADEDID",
-    afterText: "solution?",
-    spanText: "two-way SIP Trunking",
+    beforeText: "Why do",
+    afterText: " business phone numbers to TRADEDID",
+    spanText: "Ecustomers port",
     subPara: "",
   };
 
-  const voipData = [
+  const cardData = [
     {
-      title: "PSTN replacement",
-      description:
-        "Premium quality and affordable communications, including Local Dialing and Emergency Services.",
+      title: "Free number portability",
+      description: "No Porting charges when migrating DID numbers to DIDWW.",
     },
     {
-      title: "Call center & queue",
+      title: "Self-service Porting tool",
+      description: "User-friendly porting process management online.",
+    },
+    {
+      title: "Interruption-free services",
       description:
-        "Call queueing services to ensure that your business never misses an important call.",
+        "Reliable migration of your business phone numbers, ensuring service continuity during Porting.",
+    },
+    {
+      title: "Quick number portability check",
+      description: "Confirmation within one business day.",
+    },
+    {
+      title: "Phone Number Porting globally",
+      description:
+        "The widest coverage of portable Local, National, Mobile and Toll Free Phone Numbers.",
+    },
+    {
+      title: "Professional live support",
+      description:
+        "Dedicated Porting team for a seamless and effortless number migration.",
+    },
+  ];
+
+  const voipData = [
+    {
+      title: "SMS verifications",
+      description: "One-time password SMS verifications for maximum security.",
+    },
+    {
+      title: "Call centers",
+      description:
+        "Empowering call centers with reliable two-way voice communication solutions.",
     },
   ];
 
@@ -144,14 +140,15 @@ const SipServices = () => {
   return (
     <div>
       <TopSection
-        preText={"Two-way"}
-        spanText={"SIP Trunking"}
-        nextText={", with mission-critical reliability"}
-        subheading={"Expand your business communications globally"}
+        preText={"Global"}
+        spanText={"Phone Number Porting"}
+        nextText={""}
+        subheading={
+          "Transfer your business phone numbers to DIDWW in 40 countries free of charge"
+        }
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-      <SIPTrunking />
-      <PriceList />
+
       <VoIPUseCases
         data={voipData}
         subHeading={
@@ -159,6 +156,7 @@ const SipServices = () => {
         }
       />
       <SecondSection />
+
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
       <PromoBanner />
@@ -166,4 +164,4 @@ const SipServices = () => {
   );
 };
 
-export default SipServices;
+export default PhoneNumberPorting;

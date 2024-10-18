@@ -8,64 +8,54 @@ import Testimonial from "../Components/Home/Testimonials";
 import HoverBoxes from "../Components/AllPhoneNumber/HoverBoxes";
 import PromoBanner from "../Components/Home/LastSection";
 import TopSection from "../Components/Services/TopSection";
-import SIPTrunking from "../Components/Services/SipTrunks";
 
-const SipServices = () => {
+const AllTools = () => {
+  const texts = {
+    beforeText: "All the",
+    spanText: "must-have telecommunication",
+    afterText: "tools",
+    subPara: "Leverage TRADEDID solutions to enhance your business efficiency",
+  };
   const cardData = [
     {
-      title: "Quality SIP Trunks",
+      title: "Self-service User Portal",
       description:
-        "SIP traffic delivered via TRADEDID high-capacity platform, for excellent audio quality and rock-solid reliability to maintain a high ASR and ACD.",
+        "The DIDWW user panel for full control over the configuration, management and monitoring of your services.",
     },
     {
-      title: "Scalable VoIP Network",
+      title: "Number Porting tool",
       description:
-        "Virtually unlimited call Capacity and advanced trunk configurations to support the specific communication needs of operators and enterprises.",
+        "An online tool for submitting, tracking and managing Porting processes easily and efficiently.",
     },
     {
-      title: "Wholesale VoIP Termination",
+      title: "Number Selection tool",
       description:
-        "A valuable addition to the VoIP service portfolio of a wholesale SIP Trunking provider.",
+        "Instant access to an extensive global Phone Number inventory, including Gold and Vanity Numbers.",
     },
     {
-      title: "API Integration",
+      title: "Business phone.systems™",
       description:
-        "Remote trunk management via a REST API with real-time call event streaming.",
+        "Fully-scalable, simple to use cloud-based PBX with a unique interface and an extensive feature set.",
     },
     {
-      title: "PSTN Replacement",
-      description:
-        "Cost saving and innovative cloud-based solution to replace traditional telephony with VoIP SIP Trunks at competitive global rates.",
+      title: "phone.systems™ API",
+      description: "REST API for the cloud PBX phone.systems™ distribution.",
     },
     {
-      title: "Advanced Online Monitoring",
+      title: "DIDWW API",
       description:
-        "Flexible SIP Trunk settings, monitoring tools, and CDRs generated on a per SIP trunk basis.",
-    },
-    {
-      title: "Live Support",
-      description:
-        "Highly professional, customer-oriented network operations and customer support teams available on a 24/7/365 basis.",
+        "REST API for the integration of the extensive range of DIDWW core services into your own business processes.",
     },
   ];
 
-  const texts = {
-    beforeText: "Why do customers choose the TRADEDID",
-    afterText: "solution?",
-    spanText: "two-way SIP Trunking",
-    subPara: "",
-  };
-
   const voipData = [
     {
-      title: "PSTN replacement",
-      description:
-        "Premium quality and affordable communications, including Local Dialing and Emergency Services.",
+      title: "Number Masking Services",
+      description: "Voice communications without exposing real Phone Numbers.",
     },
     {
-      title: "Call center & queue",
-      description:
-        "Call queueing services to ensure that your business never misses an important call.",
+      title: "SMS Customer Support",
+      description: "Two-way business and customer communications.",
     },
   ];
 
@@ -144,20 +134,20 @@ const SipServices = () => {
   return (
     <div>
       <TopSection
-        preText={"Two-way"}
-        spanText={"SIP Trunking"}
-        nextText={", with mission-critical reliability"}
-        subheading={"Expand your business communications globally"}
+        preText={"Advanced"}
+        spanText={"self-service tools"}
+        nextText={"for telecommunication professionals"}
+        subheading={"Carrier-grade cloud telephony for your business"}
+        bgImg={"https://www.didww.com/_next/static/media/main.e85e2a11.jpg"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-      <SIPTrunking />
-      <PriceList />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
+
       <SecondSection />
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
@@ -166,4 +156,4 @@ const SipServices = () => {
   );
 };
 
-export default SipServices;
+export default AllTools;

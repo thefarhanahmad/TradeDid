@@ -8,8 +8,8 @@ const SIPTrunking = () => {
           Reliable <span className="text-orange-500">SIP Trunking</span> for
           businesses of any size
         </h2>
-        <div className="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
+        <div className="w-[90%] mx-auto flex">
+          <div className=" w-[48%] mt-6 pr-8 border-r-2 border-orange-400">
             <h3 className="text-2xl font-semibold text-[#134391]">
               Inbound SIP Trunking
             </h3>
@@ -23,7 +23,7 @@ const SIPTrunking = () => {
             </button>
           </div>
 
-          <div className="bg-white p-8 rounded-lg shadow-lg">
+          <div className=" w-[48%] mt-6 pl-8 border-l-2 border-orange-400">
             <h3 className="text-2xl font-semibold text-[#134391]">
               Outbound SIP Trunking
             </h3>

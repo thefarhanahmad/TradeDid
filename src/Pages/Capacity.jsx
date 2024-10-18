@@ -9,63 +9,66 @@ import HoverBoxes from "../Components/AllPhoneNumber/HoverBoxes";
 import PromoBanner from "../Components/Home/LastSection";
 import TopSection from "../Components/Services/TopSection";
 import SIPTrunking from "../Components/Services/SipTrunks";
+import SMSIntegration from "../Components/Services/SMSIntegration";
+import QuoteRequest from "../Components/Services/QuoteRequest";
+import DIDPlusZero from "../Components/Services/DIDplusZero";
+import BigLaptop from "../Components/Services/BigLaptop";
 
-const SipServices = () => {
-  const cardData = [
-    {
-      title: "Quality SIP Trunks",
-      description:
-        "SIP traffic delivered via TRADEDID high-capacity platform, for excellent audio quality and rock-solid reliability to maintain a high ASR and ACD.",
-    },
-    {
-      title: "Scalable VoIP Network",
-      description:
-        "Virtually unlimited call Capacity and advanced trunk configurations to support the specific communication needs of operators and enterprises.",
-    },
-    {
-      title: "Wholesale VoIP Termination",
-      description:
-        "A valuable addition to the VoIP service portfolio of a wholesale SIP Trunking provider.",
-    },
-    {
-      title: "API Integration",
-      description:
-        "Remote trunk management via a REST API with real-time call event streaming.",
-    },
-    {
-      title: "PSTN Replacement",
-      description:
-        "Cost saving and innovative cloud-based solution to replace traditional telephony with VoIP SIP Trunks at competitive global rates.",
-    },
-    {
-      title: "Advanced Online Monitoring",
-      description:
-        "Flexible SIP Trunk settings, monitoring tools, and CDRs generated on a per SIP trunk basis.",
-    },
-    {
-      title: "Live Support",
-      description:
-        "Highly professional, customer-oriented network operations and customer support teams available on a 24/7/365 basis.",
-    },
-  ];
-
+const Capacity = () => {
   const texts = {
-    beforeText: "Why do customers choose the TRADEDID",
-    afterText: "solution?",
-    spanText: "two-way SIP Trunking",
+    beforeText: "Why is the TRADEDID call",
+    afterText: "solution unique?",
+    spanText: "Capacity",
     subPara: "",
   };
 
-  const voipData = [
+  const cardData = [
     {
-      title: "PSTN replacement",
+      title: "Cost-efficient pricing",
       description:
-        "Premium quality and affordable communications, including Local Dialing and Emergency Services.",
+        "Multiple inbound VoIP call Capacity billing modes to satisfy any use case.",
     },
     {
-      title: "Call center & queue",
+      title: "No long-term commitments",
       description:
-        "Call queueing services to ensure that your business never misses an important call.",
+        "Complete freedom to instantly adjust voice Capacity configurations and volumes to suit your current and future requirements.",
+    },
+    {
+      title: "Free unlimited outbound Capacity",
+      description:
+        "Competitive outbound rates with no additional charges for voice channels.",
+    },
+    {
+      title: "Free unlimited inbound Capacity",
+      description:
+        "Toll Free and Shared Cost Numbers supporting unlimited inbound concurrent calls.",
+    },
+    {
+      title: "Instant self-service management",
+      description:
+        "Effortless and flexible live Capacity configuration management, providing adaptability for all business needs.",
+    },
+    {
+      title: "Flexible configuration options",
+      description:
+        "Scalable Capacity groups shared among multiple phone numbers, sub-customers and locations worldwide.",
+    },
+    {
+      title: "Hybrid Capacity for maximum availability",
+      description:
+        "Pay-per-minute Capacity option as a backup for flat-rate channels to handle traffic peaks.",
+    },
+  ];
+
+  const voipData = [
+    {
+      title: "SMS notifications",
+      description: "Business messaging for operational efficiency.",
+    },
+    {
+      title: "Call tracking",
+      description:
+        "Deep insights into your marketing campaigns and sales performance.",
     },
   ];
 
@@ -144,20 +147,24 @@ const SipServices = () => {
   return (
     <div>
       <TopSection
-        preText={"Two-way"}
-        spanText={"SIP Trunking"}
-        nextText={", with mission-critical reliability"}
-        subheading={"Expand your business communications globally"}
+        preText={"Remove the boundaries with flexible VoIP call"}
+        spanText={"Capacity"}
+        nextText={""}
+        subheading={
+          "Virtually unlimited concurrent calls to support your business needs"
+        }
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-      <SIPTrunking />
-      <PriceList />
+      <DIDPlusZero />
+      <BigLaptop />
+      <QuoteRequest />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
+      <SMSIntegration />
       <SecondSection />
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
@@ -166,4 +173,4 @@ const SipServices = () => {
   );
 };
 
-export default SipServices;
+export default Capacity;
