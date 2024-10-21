@@ -48,6 +48,7 @@ export const navData = [
   {
     label: "Integrations",
     items: [
+      { text: "All Integrations", url: "/Integrations/all-integration" },
       { text: "Operator", url: "/integrations/operator" },
       { text: "Enterprise", url: "/integrations/enterprise" },
     ],

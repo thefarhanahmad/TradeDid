@@ -23,6 +23,11 @@ import ForwardSMSDelivery from "./Pages/ForwardingSMSDelivery";
 import FaxPage from "./Pages/FaxPage";
 import AllTools from "./Pages/AllTools";
 import SelfService from "./Pages/SelfService";
+import PhoneNumberSelection from "./Pages/PhoneNumberSelection";
+import BusinessPhoneSystem from "./Pages/BusinessPhoneSystem";
+import TradeDidApi from "./Pages/TradeDidApi";
+import PhoneSystemAPI from "./Pages/PhoneSystemAPI";
+import AllIntegrations from "./Pages/Integrations/AllIntegrarions";
 
 function App() {
   return (
@@ -87,6 +92,23 @@ function App() {
         {/* Tools */}
         <Route path="/tools/all-tools" element={<AllTools />} />
         <Route path="/tools/self-service-portal" element={<SelfService />} />
+        <Route path="/tools/porting-tool" element={<PhoneNumberPorting />} />
+        <Route
+          path="/tools/selection-tool"
+          element={<PhoneNumberSelection />}
+        />
+        <Route
+          path="/tools/business-phone-systems"
+          element={<BusinessPhoneSystem />}
+        />
+        <Route path="/tools/TRADEDID-api" element={<TradeDidApi />} />
+        <Route path="/tools/phone-systems-api" element={<PhoneSystemAPI />} />
+
+        {/* Integrations */}
+        <Route
+          path="/Integrations/all-integrations"
+          element={<AllIntegrations />}
+        />
       </Routes>
       <Footer />
     </div>

@@ -14,65 +14,68 @@ import QuoteRequest from "../Components/Services/QuoteRequest";
 import DIDPlusZero from "../Components/Services/DIDplusZero";
 
 import Helicopter from "../Components/Services/Helicopter";
-import BigLaptop from "../Components/Tools/BigLaptop";
 
-const PhoneNumberPorting = () => {
+import BusinessPBX from "../Components/Tools/BusinessPBX";
+import ConnectTools from "../Components/Tools/ConnectTools";
+import BigLaptops from "../Components/Services/BigLaptop";
+import BigLaptop from "../Components/Tools/BigLaptop";
+import PricingPlans from "../Components/Tools/PricingPlans";
+
+const BusinessPhoneSystem = () => {
   const texts = {
-    beforeText: "Why do customers enjoy the DIDWW",
-    spanText: " Porting tool",
-    afterText: "?",
+    beforeText: "Why is phone.systems™ the",
+    spanText: "ultimate ",
+    afterText: "business PBX?",
     subPara: "",
   };
 
   const cardData = [
     {
-      title: "User-friendly tool",
-      description: "Convenient self-service management of the Porting process.",
+      title: "Innovative interface",
+      description: "Intuitive drag-and-drop UI design.",
     },
     {
-      title: "Quick number portability check",
-      description: "Confirmation within one business day.",
+      title: "Cloud PBX",
+      description: "No hardware or software required.",
     },
     {
-      title: "Simple batch Porting",
+      title: "Call encryption",
+      description: "Secure communications with TLS and SRTP protocols.",
+    },
+    {
+      title: "Fully scalable",
       description:
-        "Time-efficient Porting with up to 50,000 numbers per project from multiple carriers simultaneously.",
+        "From a small business to a global enterprise with multiple locations.",
     },
     {
-      title: "Flexible Porting schedule",
+      title: "User-friendly",
+      description: "Easy to set up - no special skills or training required.",
+    },
+    {
+      title: "Full feature set",
+      description: "Extensive functionality for businesses of any size.",
+    },
+    {
+      title: "Competitive pricing",
+      description: "Multiple pricing plans for any business model.",
+    },
+    {
+      title: "Free integrated softphone",
       description:
-        "Selecting your preferred Porting date and time for convenient portability.",
-    },
-    {
-      title: "Effortless project management",
-      description:
-        "Managing a multitude of projects from different customers with ease.",
-    },
-    {
-      title: "Instant notifications",
-      description: "Porting alerts at every step for a seamless process.",
-    },
-    {
-      title: "Porting role",
-      description:
-        "A dedicated user role for handling all Porting processes via the self-service user panel.",
-    },
-    {
-      title: "Convenient paperwork",
-      description:
-        "Quick and easy access to required Porting forms in one place.",
+        "Complete business phone system with a softphone for iOS, MacOS, Android and Windows.",
     },
   ];
 
   const voipData = [
     {
-      title: "SMS verifications",
-      description: "One-time password SMS verifications for maximum security.",
+      title: "Conference calling",
+      description:
+        "Secure, enterprise-grade audio conferencing around the globe.",
     },
     {
-      title: "Call centers",
+      title: "Global presence",
       description:
-        "Empowering call centers with reliable two-way voice communication solutions.",
+        "The largest coverage of premium quality Local, Mobile, National and Toll Free Virtual Phone Numbers.",
     },
   ];
 
@@ -151,19 +154,25 @@ const PhoneNumberPorting = () => {
   return (
     <div>
       <TopSection
-        preText={"Effortless Phone"}
-        spanText={"Number Porting"}
-        nextText={"experience"}
-        subheading={"Self-service DIDWW Porting tool"}
+        preText={"A business phone system that is"}
+        spanText={"simple "}
+        nextText={"to set up"}
+        subheading={"Cloud-based PBX with an intuitive drag-and-drop interface"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-      <BigLaptop />
+      <BusinessPBX />
+      <BigLaptops list={true} />
+      <ConnectTools />
+      <BigLaptop list={true} />
+      <BigLaptops tools={true} />
+      <PricingPlans />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
+
       <SecondSection />
 
       <Testimonial />
@@ -173,4 +182,4 @@ const PhoneNumberPorting = () => {
   );
 };
 
-export default PhoneNumberPorting;
+export default BusinessPhoneSystem;

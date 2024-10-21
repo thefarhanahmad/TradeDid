@@ -10,6 +10,7 @@ import PromoBanner from "../Components/Home/LastSection";
 import TopSection from "../Components/Services/TopSection";
 import BusinessTools from "../Components/Tools/BusinessTools";
 import ServiceMonitoring from "../Components/Tools/ServiceMonitoring";
+import QuoteRequest from "../Components/Services/QuoteRequest";
 
 const SelfService = () => {
   const texts = {
@@ -145,6 +146,7 @@ const SelfService = () => {
       <DIDNumbersSection data={cardData} texts={texts} />
       <BusinessTools />
       <ServiceMonitoring />
+      <QuoteRequest />
       <VoIPUseCases
         data={voipData}
         subHeading={
