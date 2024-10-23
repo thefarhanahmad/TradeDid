@@ -1,6 +1,6 @@
 import React from "react";
 import { RxDot } from "react-icons/rx";
-import laptop from "../../assets/laptop-screen.png";
+import laptop from "../../assets/Laptop-screen.png";
 
 const ServiceMonitoring = () => {
   return (
