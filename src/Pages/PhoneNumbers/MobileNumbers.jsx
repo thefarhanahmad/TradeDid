@@ -1,89 +1,76 @@
 import React from "react";
+import TopSection from "../../Components/AllPhoneNumber/TopSection";
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
-import TopSection from "../../Components/Services/TopSection";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 
-const AllIntegrations = () => {
-  const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
-    subPara: "",
-  };
-
+const MobileNumbers = () => {
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
-    },
-    {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
-    },
-    {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
-    },
-    {
-      title: "Number Selection",
+      title: "Two-way Voice and SMS",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "Both voice and text communications supported on the same Mobile Phone Number.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
+      title: "Voice Forwarding",
+      description: "A wide range of delivery options including SIP and PSTN.",
     },
     {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
-    },
-    {
-      title: "Developer friendly",
+      title: "SMS Trunks",
       description:
-        "Multiple libraries available for key programming languages.",
+        "Flexible delivery methods, including SMPP, HTTP, and Email.",
     },
     {
-      title: "Complete API documentation",
+      title: "99.998% Core Network Uptime",
       description:
-        "Access to extensive resources with examples for API implementation.",
+        "Highly scalable, secure, and fully geo-redundant private network infrastructure with live, in-house monitoring 24/7/365.",
     },
     {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
-    },
-    {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
+      title: "Licenced Operator for Voice and SMS",
       description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
+        "Fully licenced operator in 30+ countries with our own numbering resources in multiple geographies.",
     },
     {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+      title: "Large Inventory",
+      description:
+        "Readily available Voice and SMS-enabled Virtual Phone Numbers in 91 countries.",
+    },
+    {
+      title: "Full Compliance",
+      description:
+        "Adherence to all regulatory standards globally for all VoIP services, including Local Dialing and Emergency Calling.",
+    },
+    {
+      title: "Competitive SMS Rates",
+      description: "Volume-based inbound and outbound SMS pricing.",
+    },
+    {
+      title: "Number Selection Tool",
+      description:
+        "Instant access to an extensive global Phone Number inventory, including Gold and Vanity Numbers.",
     },
   ];
 
+  const texts = {
+    beforeText: "Why do customers choose TRADEDID",
+    afterText: "Phone Numbers?",
+    spanText: "Mobile",
+  };
+
   const voipData = [
     {
-      title: "Phone Numbers as a value-added service",
+      title: "Business Phone System",
       description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+        "Fully-scalable, simple to use, cloud-based PBX with a unique interface and an extensive feature set.",
     },
     {
-      title: "Call centers",
+      title: "Phone Numbers as a Value-Added Service",
       description:
-        "Empowering call centers with reliable two-way voice communication solutions.",
+        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5256 area codes.",
     },
   ];
 
@@ -162,25 +149,20 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
-        nextText={""}
-        subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
-        }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
+        preText={""}
+        spanText={"Mobile DIDs"}
+        nextText={"for your business communications"}
+        subheading={"Voice and SMS enabled Mobile Phone Numbers"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
+      <PriceList />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
-
       <SecondSection />
-
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
       <PromoBanner />
@@ -188,4 +170,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default MobileNumbers;

@@ -1,89 +1,75 @@
 import React from "react";
+
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 import TopSection from "../../Components/Services/TopSection";
+import SIPTrunking from "../../Components/Services/SipTrunks";
+import SMSIntegration from "../../Components/Services/SMSIntegration";
+import QuoteRequest from "../../Components/Services/QuoteRequest";
 
-const AllIntegrations = () => {
+const TwoWaySms = () => {
   const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
+    beforeText: "Why do customers choose the TRADEDID",
+    afterText: "services?",
+    spanText: "SMS",
     subPara: "",
   };
 
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
+      title: "Extensive SMS coverage",
+      description: "Premium quality SMS services available worldwide.",
     },
     {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
-    },
-    {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
-    },
-    {
-      title: "Number Selection",
+      title: "Competitive SMS pricing",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "Cost-efficient rates ensuring a global reach for any business use case.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
-    },
-    {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
-    },
-    {
-      title: "Developer friendly",
+      title: "Compliant SMS",
       description:
-        "Multiple libraries available for key programming languages.",
+        "Full regulatory compliance globally for all services, including two-way SMS.",
     },
     {
-      title: "Complete API documentation",
+      title: "99.998% core network uptime",
       description:
-        "Access to extensive resources with examples for API implementation.",
+        "Highly scalable, secure and fully geo-redundant private network infrastructure with live, in-house monitoring 24/7/365.",
     },
     {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
-    },
-    {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
+      title: "Voice and SMS on a single phone number",
       description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
+        "Complete two-way communication solution for an enhanced customer experience.",
     },
     {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+      title: "SMS trunks",
+      description: "Flexible delivery methods, including SMPP, HTTP and Email.",
+    },
+    {
+      title: "Advanced settings",
+      description:
+        "Configuration and monitoring of inbound and outbound SMS trunks available through the DIDWW User Panel.",
+    },
+    {
+      title: "Simple to use",
+      description:
+        "Sending messages with the Outbound SMS API or through the User Panel.",
     },
   ];
 
   const voipData = [
     {
-      title: "Phone Numbers as a value-added service",
-      description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+      title: "SMS surveys",
+      description: "Two-way messaging for gathering user responses.",
     },
     {
-      title: "Call centers",
+      title: "Cloud IVR",
       description:
-        "Empowering call centers with reliable two-way voice communication solutions.",
+        "Easy to set up, interactive voice response service for companies of any size.",
     },
   ];
 
@@ -162,25 +148,23 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
-        nextText={""}
+        preText={"Two-way"}
+        spanText={"SMS trunks"}
+        nextText={"for P2P and A2P messaging"}
         subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
+          "Enrich your business communications with SMS and voice-enabled phone numbers"
         }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
+      <SMSIntegration />
+      <QuoteRequest />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
-
       <SecondSection />
-
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
       <PromoBanner />
@@ -188,4 +172,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default TwoWaySms;

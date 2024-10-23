@@ -1,84 +1,59 @@
 import React from "react";
+
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 import TopSection from "../../Components/Services/TopSection";
+import SIPTrunking from "../../Components/Services/SipTrunks";
+import SMSIntegration from "../../Components/Services/SMSIntegration";
+import QuoteRequest from "../../Components/Services/QuoteRequest";
+import DIDPlusZero from "../../Components/Services/DIDplusZero";
+import BigLaptop from "../../Components/Services/BigLaptop";
+import Helicopter from "../../Components/Services/Helicopter";
 
-const AllIntegrations = () => {
+const FaxPage = () => {
   const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
+    beforeText: "Why do customers choose TRADEDID",
+    afterText: "services?",
+    spanText: "Fax",
     subPara: "",
   };
 
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
-    },
-    {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
-    },
-    {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
-    },
-    {
-      title: "Number Selection",
+      title: "Wide Fax coverage",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "Extensive global footprint of fax-enabled Phone Numbers in 31 countries.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
+      title: "Free of charge",
+      description: "An unlimited number of Fax documents delivered at no cost.",
     },
     {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
-    },
-    {
-      title: "Developer friendly",
+      title: "Multiple protocols supported",
       description:
-        "Multiple libraries available for key programming languages.",
+        "T.38 and G.711 VoIP fax communication standards supported by DIDWW Phone Numbers.",
     },
     {
-      title: "Complete API documentation",
+      title: "Extensive delivery options",
       description:
-        "Access to extensive resources with examples for API implementation.",
+        "Fax delivery via phone.systems™ to email, Dropbox, FTP, SFTP, Google Drive and OneDrive.",
     },
     {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
-    },
-    {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
+      title: "Easy configuration",
       description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
-    },
-    {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+        "Setting up Fax delivery to the cloud in less than a minute.",
     },
   ];
 
   const voipData = [
     {
-      title: "Phone Numbers as a value-added service",
-      description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+      title: "SMS verifications",
+      description: "One-time password SMS verifications for maximum security.",
     },
     {
       title: "Call centers",
@@ -86,7 +61,6 @@ const AllIntegrations = () => {
         "Empowering call centers with reliable two-way voice communication solutions.",
     },
   ];
-
   const hoverBoxes = [
     {
       title: "Extensive DID coverage",
@@ -162,23 +136,19 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
-        nextText={""}
-        subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
-        }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
+        preText={"Virtual"}
+        spanText={"Fax"}
+        nextText={"number for your business"}
+        subheading={"Fax delivery through SIP Trunking"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
+      <QuoteRequest />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
-
       <SecondSection />
 
       <Testimonial />
@@ -188,4 +158,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default FaxPage;

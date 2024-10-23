@@ -1,89 +1,81 @@
 import React from "react";
+
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 import TopSection from "../../Components/Services/TopSection";
+import SIPTrunking from "../../Components/Services/SipTrunks";
+import SMSIntegration from "../../Components/Services/SMSIntegration";
+import QuoteRequest from "../../Components/Services/QuoteRequest";
+import DIDPlusZero from "../../Components/Services/DIDplusZero";
 
-const AllIntegrations = () => {
+import Helicopter from "../../Components/Services/Helicopter";
+
+import BusinessPBX from "../../Components/Tools/BusinessPBX";
+import ConnectTools from "../../Components/Tools/ConnectTools";
+import BigLaptops from "../../Components/Services/BigLaptop";
+import BigLaptop from "../../Components/Tools/BigLaptop";
+import PricingPlans from "../../Components/Tools/PricingPlans";
+
+const BusinessPhoneSystem = () => {
   const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
+    beforeText: "Why is phone.systems™ the",
+    spanText: "ultimate ",
+    afterText: "business PBX?",
     subPara: "",
   };
 
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
+      title: "Innovative interface",
+      description: "Intuitive drag-and-drop UI design.",
     },
     {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
+      title: "Cloud PBX",
+      description: "No hardware or software required.",
     },
     {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
+      title: "Call encryption",
+      description: "Secure communications with TLS and SRTP protocols.",
     },
     {
-      title: "Number Selection",
+      title: "Fully scalable",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "From a small business to a global enterprise with multiple locations.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
+      title: "User-friendly",
+      description: "Easy to set up - no special skills or training required.",
     },
     {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
+      title: "Full feature set",
+      description: "Extensive functionality for businesses of any size.",
     },
     {
-      title: "Developer friendly",
+      title: "Competitive pricing",
+      description: "Multiple pricing plans for any business model.",
+    },
+    {
+      title: "Free integrated softphone",
       description:
-        "Multiple libraries available for key programming languages.",
-    },
-    {
-      title: "Complete API documentation",
-      description:
-        "Access to extensive resources with examples for API implementation.",
-    },
-    {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
-    },
-    {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
-      description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
-    },
-    {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+        "Complete business phone system with a softphone for iOS, MacOS, Android and Windows.",
     },
   ];
 
   const voipData = [
     {
-      title: "Phone Numbers as a value-added service",
+      title: "Conference calling",
       description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+        "Secure, enterprise-grade audio conferencing around the globe.",
     },
     {
-      title: "Call centers",
+      title: "Global presence",
       description:
-        "Empowering call centers with reliable two-way voice communication solutions.",
+        "The largest coverage of premium quality Local, Mobile, National and Toll Free Virtual Phone Numbers.",
     },
   ];
 
@@ -162,16 +154,18 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
-        nextText={""}
-        subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
-        }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
+        preText={"A business phone system that is"}
+        spanText={"simple "}
+        nextText={"to set up"}
+        subheading={"Cloud-based PBX with an intuitive drag-and-drop interface"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
+      <BusinessPBX />
+      <BigLaptops list={true} />
+      <ConnectTools />
+      <BigLaptop list={true} />
+      <BigLaptops tools={true} />
+      <PricingPlans />
       <VoIPUseCases
         data={voipData}
         subHeading={
@@ -188,4 +182,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default BusinessPhoneSystem;

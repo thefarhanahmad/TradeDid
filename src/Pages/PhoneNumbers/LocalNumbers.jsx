@@ -1,89 +1,77 @@
 import React from "react";
+import TopSection from "../../Components/AllPhoneNumber/TopSection";
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
-import TopSection from "../../Components/Services/TopSection";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 
-const AllIntegrations = () => {
-  const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
-    subPara: "",
-  };
-
+const LocalNumbers = () => {
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
-    },
-    {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
-    },
-    {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
-    },
-    {
-      title: "Number Selection",
+      title: "Large Inventory",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "Instantly available Local Virtual Phone Numbers in 62 countries and 5207 area codes worldwide.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
-    },
-    {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
-    },
-    {
-      title: "Developer friendly",
+      title: "Licenced Operator for Voice and SMS",
       description:
-        "Multiple libraries available for key programming languages.",
+        "Fully licenced operator in 30+ countries with our own numbering resources in multiple geographies.",
     },
     {
-      title: "Complete API documentation",
+      title: "Local Phone Number Portability",
       description:
-        "Access to extensive resources with examples for API implementation.",
+        "Wide porting coverage for the seamless migration of your numbers to TRADEDID free of charge.",
     },
     {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
-    },
-    {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
+      title: "Full Compliance",
       description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
+        "Adherence to all regulatory standards globally for all VoIP services, including Local Dialing and Emergency Calling.",
     },
     {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+      title: "Premium Call Quality",
+      description:
+        "Local Phone Numbers, with own numbering ranges and direct interconnections.",
+    },
+    {
+      title: "99.998% Core Network Uptime",
+      description:
+        "Highly scalable, secure, and fully geo-redundant private network infrastructure with live, in-house monitoring 24/7/365.",
+    },
+    {
+      title: "Flexible Capacity Options",
+      description:
+        "Flat-rate, pay-per-minute, or hybrid voice channel capacity for maximum availability and cost-efficiency.",
+    },
+    {
+      title: "Number Selection Tool",
+      description:
+        "Instant access to an extensive global Phone Number inventory, including Gold and Vanity Numbers.",
+    },
+    {
+      title: "Emergency Calling",
+      description:
+        "DID Numbers routed to the relevant PSAP for safety and compliance.",
     },
   ];
+
+  const texts = {
+    beforeText: "Why do customers choose TRADEDID",
+    afterText: "Phone Numbers ? ",
+    spanText: "Local",
+  };
 
   const voipData = [
     {
       title: "Phone Numbers as a value-added service",
       description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5256 area codes.",
     },
     {
-      title: "Call centers",
-      description:
-        "Empowering call centers with reliable two-way voice communication solutions.",
+      title: "SMS surveys",
+      description: "Two-way messaging for gathering user responses.",
     },
   ];
 
@@ -162,25 +150,22 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
-        nextText={""}
+        preText={""}
+        spanText={"Local"}
+        nextText={"Phone Numbers for global business access"}
         subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
+          "Establish your local presence in 5207 area codes with geographical DIDs"
         }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
+      <PriceList />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
-
       <SecondSection />
-
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
       <PromoBanner />
@@ -188,4 +173,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default LocalNumbers;

@@ -123,9 +123,7 @@ export default function DIDPlusZero() {
         </div>
       </div>
 
-      <div className="max-w-5xl mt-6 w-full  rounded-xl  p-8">
-        
-      </div>
+      <div className="max-w-5xl mt-6 w-full  rounded-xl  p-8"></div>
     </div>
   );
 }

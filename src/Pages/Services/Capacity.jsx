@@ -1,89 +1,74 @@
 import React from "react";
+
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 import TopSection from "../../Components/Services/TopSection";
+import SIPTrunking from "../../Components/Services/SipTrunks";
+import SMSIntegration from "../../Components/Services/SMSIntegration";
+import QuoteRequest from "../../Components/Services/QuoteRequest";
+import DIDPlusZero from "../../Components/Services/DIDplusZero";
+import BigLaptop from "../../Components/Services/BigLaptop";
 
-const AllIntegrations = () => {
+const Capacity = () => {
   const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
+    beforeText: "Why is the TRADEDID call",
+    afterText: "solution unique?",
+    spanText: "Capacity",
     subPara: "",
   };
 
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
-    },
-    {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
-    },
-    {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
-    },
-    {
-      title: "Number Selection",
+      title: "Cost-efficient pricing",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "Multiple inbound VoIP call Capacity billing modes to satisfy any use case.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
-    },
-    {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
-    },
-    {
-      title: "Developer friendly",
+      title: "No long-term commitments",
       description:
-        "Multiple libraries available for key programming languages.",
+        "Complete freedom to instantly adjust voice Capacity configurations and volumes to suit your current and future requirements.",
     },
     {
-      title: "Complete API documentation",
+      title: "Free unlimited outbound Capacity",
       description:
-        "Access to extensive resources with examples for API implementation.",
+        "Competitive outbound rates with no additional charges for voice channels.",
     },
     {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
-    },
-    {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
+      title: "Free unlimited inbound Capacity",
       description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
+        "Toll Free and Shared Cost Numbers supporting unlimited inbound concurrent calls.",
     },
     {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+      title: "Instant self-service management",
+      description:
+        "Effortless and flexible live Capacity configuration management, providing adaptability for all business needs.",
+    },
+    {
+      title: "Flexible configuration options",
+      description:
+        "Scalable Capacity groups shared among multiple phone numbers, sub-customers and locations worldwide.",
+    },
+    {
+      title: "Hybrid Capacity for maximum availability",
+      description:
+        "Pay-per-minute Capacity option as a backup for flat-rate channels to handle traffic peaks.",
     },
   ];
 
   const voipData = [
     {
-      title: "Phone Numbers as a value-added service",
-      description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+      title: "SMS notifications",
+      description: "Business messaging for operational efficiency.",
     },
     {
-      title: "Call centers",
+      title: "Call tracking",
       description:
-        "Empowering call centers with reliable two-way voice communication solutions.",
+        "Deep insights into your marketing campaigns and sales performance.",
     },
   ];
 
@@ -162,25 +147,25 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
+        preText={"Remove the boundaries with flexible VoIP call"}
+        spanText={"Capacity"}
         nextText={""}
         subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
+          "Virtually unlimited concurrent calls to support your business needs"
         }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
+      <DIDPlusZero />
+      <BigLaptop />
+      <QuoteRequest />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
-
+      <SMSIntegration />
       <SecondSection />
-
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
       <PromoBanner />
@@ -188,4 +173,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default Capacity;

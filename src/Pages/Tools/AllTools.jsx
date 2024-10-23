@@ -1,89 +1,61 @@
 import React from "react";
+
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 import TopSection from "../../Components/Services/TopSection";
 
-const AllIntegrations = () => {
+const AllTools = () => {
   const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
-    subPara: "",
+    beforeText: "All the",
+    spanText: "must-have telecommunication",
+    afterText: "tools",
+    subPara: "Leverage TRADEDID solutions to enhance your business efficiency",
   };
-
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
-    },
-    {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
-    },
-    {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
-    },
-    {
-      title: "Number Selection",
+      title: "Self-service User Portal",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "The DIDWW user panel for full control over the configuration, management and monitoring of your services.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
-    },
-    {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
-    },
-    {
-      title: "Developer friendly",
+      title: "Number Porting tool",
       description:
-        "Multiple libraries available for key programming languages.",
+        "An online tool for submitting, tracking and managing Porting processes easily and efficiently.",
     },
     {
-      title: "Complete API documentation",
+      title: "Number Selection tool",
       description:
-        "Access to extensive resources with examples for API implementation.",
+        "Instant access to an extensive global Phone Number inventory, including Gold and Vanity Numbers.",
     },
     {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
-    },
-    {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
+      title: "Business phone.systems™",
       description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
+        "Fully-scalable, simple to use cloud-based PBX with a unique interface and an extensive feature set.",
     },
     {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+      title: "phone.systems™ API",
+      description: "REST API for the cloud PBX phone.systems™ distribution.",
+    },
+    {
+      title: "DIDWW API",
+      description:
+        "REST API for the integration of the extensive range of DIDWW core services into your own business processes.",
     },
   ];
 
   const voipData = [
     {
-      title: "Phone Numbers as a value-added service",
-      description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+      title: "Number Masking Services",
+      description: "Voice communications without exposing real Phone Numbers.",
     },
     {
-      title: "Call centers",
-      description:
-        "Empowering call centers with reliable two-way voice communication solutions.",
+      title: "SMS Customer Support",
+      description: "Two-way business and customer communications.",
     },
   ];
 
@@ -162,16 +134,13 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
-        nextText={""}
-        subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
-        }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
+        preText={"Advanced"}
+        spanText={"self-service tools"}
+        nextText={"for telecommunication professionals"}
+        subheading={"Carrier-grade cloud telephony for your business"}
+        bgImg={"https://www.didww.com/_next/static/media/main.e85e2a11.jpg"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
       <VoIPUseCases
         data={voipData}
         subHeading={
@@ -180,7 +149,6 @@ const AllIntegrations = () => {
       />
 
       <SecondSection />
-
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
       <PromoBanner />
@@ -188,4 +156,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default AllTools;

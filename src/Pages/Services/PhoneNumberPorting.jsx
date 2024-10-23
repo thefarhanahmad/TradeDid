@@ -1,84 +1,73 @@
 import React from "react";
+
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 import TopSection from "../../Components/Services/TopSection";
+import SIPTrunking from "../../Components/Services/SipTrunks";
+import SMSIntegration from "../../Components/Services/SMSIntegration";
+import QuoteRequest from "../../Components/Services/QuoteRequest";
+import DIDPlusZero from "../../Components/Services/DIDplusZero";
 
-const AllIntegrations = () => {
+import Helicopter from "../../Components/Services/Helicopter";
+import BigLaptop from "../../Components/Tools/BigLaptop";
+
+const PhoneNumberPorting = () => {
   const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
+    beforeText: "Why do customers enjoy the DIDWW",
+    spanText: " Porting tool",
+    afterText: "?",
     subPara: "",
   };
 
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
+      title: "User-friendly tool",
+      description: "Convenient self-service management of the Porting process.",
     },
     {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
+      title: "Quick number portability check",
+      description: "Confirmation within one business day.",
     },
     {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
-    },
-    {
-      title: "Number Selection",
+      title: "Simple batch Porting",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "Time-efficient Porting with up to 50,000 numbers per project from multiple carriers simultaneously.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
-    },
-    {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
-    },
-    {
-      title: "Developer friendly",
+      title: "Flexible Porting schedule",
       description:
-        "Multiple libraries available for key programming languages.",
+        "Selecting your preferred Porting date and time for convenient portability.",
     },
     {
-      title: "Complete API documentation",
+      title: "Effortless project management",
       description:
-        "Access to extensive resources with examples for API implementation.",
+        "Managing a multitude of projects from different customers with ease.",
     },
     {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
+      title: "Instant notifications",
+      description: "Porting alerts at every step for a seamless process.",
     },
     {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
+      title: "Porting role",
       description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
+        "A dedicated user role for handling all Porting processes via the self-service user panel.",
     },
     {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+      title: "Convenient paperwork",
+      description:
+        "Quick and easy access to required Porting forms in one place.",
     },
   ];
 
   const voipData = [
     {
-      title: "Phone Numbers as a value-added service",
-      description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+      title: "SMS verifications",
+      description: "One-time password SMS verifications for maximum security.",
     },
     {
       title: "Call centers",
@@ -162,23 +151,19 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
-        nextText={""}
-        subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
-        }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
+        preText={"Effortless Phone"}
+        spanText={"Number Porting"}
+        nextText={"experience"}
+        subheading={"Self-service DIDWW Porting tool"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
+      <BigLaptop />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
-
       <SecondSection />
 
       <Testimonial />
@@ -188,4 +173,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default PhoneNumberPorting;

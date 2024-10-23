@@ -1,89 +1,77 @@
 import React from "react";
+import TopSection from "../../Components/AllPhoneNumber/TopSection";
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
-import TopSection from "../../Components/Services/TopSection";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 
-const AllIntegrations = () => {
-  const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
-    subPara: "",
-  };
-
+const UniversalNumbers = () => {
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
-    },
-    {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
-    },
-    {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
-    },
-    {
-      title: "Number Selection",
+      title: "Extensive Reachability",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "A single UIFN is reachable from 60 countries, with coverage being continually expanded.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
-    },
-    {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
-    },
-    {
-      title: "Developer friendly",
+      title: "Cost Saving",
       description:
-        "Multiple libraries available for key programming languages.",
+        "Highly cost-efficient Toll Free solution for international businesses.",
     },
     {
-      title: "Complete API documentation",
+      title: "Quick Setup and Easy Management",
       description:
-        "Access to extensive resources with examples for API implementation.",
+        "Effortless and swift number acquisition and service management.",
     },
     {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
-    },
-    {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
+      title: "Premium Call Quality",
       description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
+        "Universal International Freephone Numbers combined with premium quality, reliability, and full regulatory compliance.",
     },
     {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+      title: "Free Unlimited Capacity",
+      description:
+        "Universal International Freephone Numbers with a virtually unlimited incoming call capacity.",
+    },
+    {
+      title: "Simplified Marketing",
+      description:
+        "A single number for marketing campaigns in multiple countries for convenience and cost-efficiency.",
+    },
+    {
+      title: "Global Business Presence",
+      description:
+        "Establishing a truly global reach for a business of any size.",
+    },
+    {
+      title: "Full Compliance",
+      description:
+        "Adherence to all regulatory standards globally for all VoIP services.",
+    },
+    {
+      title: "Effortless Business Expansion",
+      description:
+        "An easy way to enter new markets by activating the same UIFN in additional countries.",
     },
   ];
 
+  const texts = {
+    beforeText: "Why do customers choose TRADEDID",
+    afterText: "(UIFNs)? ",
+    spanText: "Universal International Freephone Numbers",
+  };
+
   const voipData = [
     {
-      title: "Phone Numbers as a value-added service",
-      description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+      title: "SMS Customer Support",
+      description: "Two-way business and customer communications.",
     },
     {
-      title: "Call centers",
+      title: "Call Center & Queue",
       description:
-        "Empowering call centers with reliable two-way voice communication solutions.",
+        "Call queueing services to ensure that your business never misses an important call.",
     },
   ];
 
@@ -162,25 +150,20 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
-        nextText={""}
-        subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
-        }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
+        preText={""}
+        spanText={"Fully-compliant"}
+        nextText={"Universal International Freephone Numbers"}
+        subheading={"A single Toll Free number for global reachability"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
+      <PriceList />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
-
       <SecondSection />
-
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
       <PromoBanner />
@@ -188,4 +171,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default UniversalNumbers;

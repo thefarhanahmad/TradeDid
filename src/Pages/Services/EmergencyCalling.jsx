@@ -1,89 +1,76 @@
 import React from "react";
+
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 import TopSection from "../../Components/Services/TopSection";
+import SIPTrunking from "../../Components/Services/SipTrunks";
+import SMSIntegration from "../../Components/Services/SMSIntegration";
+import QuoteRequest from "../../Components/Services/QuoteRequest";
+import DIDPlusZero from "../../Components/Services/DIDplusZero";
+import BigLaptop from "../../Components/Services/BigLaptop";
+import Helicopter from "../../Components/Services/Helicopter";
 
-const AllIntegrations = () => {
+const EmergencyCalling = () => {
   const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
+    beforeText: "Why do customers choose the TRADEDID",
+    afterText: "service?",
+    spanText: "Emergency Calling",
     subPara: "",
   };
 
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
-    },
-    {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
-    },
-    {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
-    },
-    {
-      title: "Number Selection",
+      title: "Extensive coverage",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "Access to Public Safety Answering Points (PSAPs) in 37 countries for safety and compliance.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
-    },
-    {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
-    },
-    {
-      title: "Developer friendly",
+      title: "True Emergency calling",
       description:
-        "Multiple libraries available for key programming languages.",
+        "Ensuring direct connection to the appropriate Public Safety Answering Point (PSAP) with Local Dialing.",
     },
     {
-      title: "Complete API documentation",
+      title: "PSTN replacement",
       description:
-        "Access to extensive resources with examples for API implementation.",
+        "Building a full PSTN replacement solution with Local Dialing and Emergency Calling.",
     },
     {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
-    },
-    {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
+      title: "Free calls to PSAPs",
       description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
+        "Cost-effective pricing model with a low service set-up fee.",
     },
     {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+      title: "Data security",
+      description:
+        "All personal data handled and encrypted in accordance with the ISO 27001 security standard.",
+    },
+    {
+      title: "Simplified address management",
+      description:
+        "Direct access to Emergency databases and tools for effortless address validation.",
+    },
+    {
+      title: "Global phone number portability",
+      description:
+        "Wide Porting coverage for the seamless migration of your numbers to DIDWW free of charge.",
     },
   ];
 
   const voipData = [
     {
-      title: "Phone Numbers as a value-added service",
+      title: "Cloud IVR",
       description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+        "Easy to set up, interactive voice response service for companies of any size.",
     },
     {
-      title: "Call centers",
+      title: "Call tracking",
       description:
-        "Empowering call centers with reliable two-way voice communication solutions.",
+        "Deep insights into your marketing campaigns and sales performance.",
     },
   ];
 
@@ -162,23 +149,20 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
+        preText={"Full compliance with"}
+        spanText={"Emergency Calling"}
         nextText={""}
-        subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
-        }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
+        subheading={"PSTN replacement for business communications"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
+      <Helicopter />
+      <QuoteRequest />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
-
       <SecondSection />
 
       <Testimonial />
@@ -188,4 +172,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default EmergencyCalling;

@@ -1,89 +1,68 @@
 import React from "react";
+import TopSection from "../../Components/AllPhoneNumber/TopSection";
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
-import TopSection from "../../Components/Services/TopSection";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 
-const AllIntegrations = () => {
-  const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
-    subPara: "",
-  };
-
+const ShareCostNumbers = () => {
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
-    },
-    {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
-    },
-    {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
-    },
-    {
-      title: "Number Selection",
+      title: "Easy Setup",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "Quick access to Shared Cost Phone Numbers for businesses worldwide.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
-    },
-    {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
-    },
-    {
-      title: "Developer friendly",
+      title: "Free Unlimited Capacity",
       description:
-        "Multiple libraries available for key programming languages.",
+        "Shared Cost Phone Numbers provided with a virtually unlimited incoming call capacity.",
     },
     {
-      title: "Complete API documentation",
+      title: "Licenced Operator for Voice and SMS",
       description:
-        "Access to extensive resources with examples for API implementation.",
+        "Fully licenced operator in 30+ countries with our own numbering resources in multiple geographies.",
     },
     {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
-    },
-    {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
+      title: "Shared Cost Phone Number Portability",
       description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
+        "Wide porting coverage for the seamless migration of your numbers to TRADEDID free of charge.",
     },
     {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+      title: "Number Selection Tool",
+      description:
+        "Instant access to an extensive global Phone Number inventory, including Gold and Vanity Numbers.",
+    },
+    {
+      title: "99.998% Core Network Uptime",
+      description:
+        "Highly scalable, secure, and fully geo-redundant private network infrastructure with live, in-house monitoring 24/7/365.",
+    },
+    {
+      title: "Full Compliance",
+      description:
+        "Adherence to all regulatory standards globally for all VoIP services, including Local Dialing and Emergency Calling.",
     },
   ];
 
+  const texts = {
+    beforeText: "Why do customers choose TRADEDID",
+    afterText: "Phone Numbers?",
+    spanText: "Shared Cost",
+  };
+
   const voipData = [
     {
-      title: "Phone Numbers as a value-added service",
+      title: "Phone Numbers as a Value-Added Service",
       description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5256 area codes.",
     },
     {
-      title: "Call centers",
+      title: "PSTN Replacement",
       description:
-        "Empowering call centers with reliable two-way voice communication solutions.",
+        "Premium quality and affordable communications, including Local Dialing and Emergency Services.",
     },
   ];
 
@@ -162,25 +141,20 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
-        nextText={""}
-        subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
-        }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
+        preText={""}
+        spanText={"Shared Cost"}
+        nextText={"Numbers for country-wide access"}
+        subheading={"Easy business phone number setup"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
+      <PriceList />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
-
       <SecondSection />
-
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
       <PromoBanner />
@@ -188,4 +162,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default ShareCostNumbers;

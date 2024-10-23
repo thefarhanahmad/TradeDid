@@ -1,89 +1,62 @@
 import React from "react";
+
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 import TopSection from "../../Components/Services/TopSection";
+import BusinessTools from "../../Components/Tools/BusinessTools";
+import ServiceMonitoring from "../../Components/Tools/ServiceMonitoring";
+import QuoteRequest from "../../Components/Services/QuoteRequest";
 
-const AllIntegrations = () => {
+const SelfService = () => {
   const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
+    beforeText: "How does the DIDWW User Portal deliver the best",
+    spanText: "online experience",
+    afterText: "?",
     subPara: "",
   };
-
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
-    },
-    {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
-    },
-    {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
-    },
-    {
-      title: "Number Selection",
+      title: "One-stop shop",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "All Voice and SMS solutions available in one place for businesses of any size.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
-    },
-    {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
-    },
-    {
-      title: "Developer friendly",
+      title: "Extensive configuration capabilities",
       description:
-        "Multiple libraries available for key programming languages.",
+        "Sophisticated setup options for Voice and SMS to meet the needs of enterprises and telecom operators.",
     },
     {
-      title: "Complete API documentation",
+      title: "Powerful platform",
       description:
-        "Access to extensive resources with examples for API implementation.",
+        "Instant provisioning, multiple filtering options and real-time management of inbound and outbound communications.",
     },
     {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
-    },
-    {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
+      title: "Service monitoring",
       description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
+        "Call and traffic statistics with graphical data and instant access to detailed Voice and SMS CDRs.",
     },
     {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+      title: "Automation",
+      description:
+        "Preconfigured templates for service and account management.",
     },
   ];
 
   const voipData = [
     {
-      title: "Phone Numbers as a value-added service",
+      title: "Phone Numbers as a Value-Added Service",
       description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5257 area codes.",
     },
     {
-      title: "Call centers",
+      title: "Call Tracking",
       description:
-        "Empowering call centers with reliable two-way voice communication solutions.",
+        "Deep insights into your marketing campaigns and sales performance.",
     },
   ];
 
@@ -162,16 +135,18 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
+        preText={"Full control with the DIDWW Self-service"}
+        spanText={"User Portal"}
         nextText={""}
         subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
+          "Instant provisioning and online management for telcos and enterprises"
         }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
+        bgImg={"https://www.didww.com/_next/static/media/main.e85e2a11.jpg"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
+      <BusinessTools />
+      <ServiceMonitoring />
+      <QuoteRequest />
       <VoIPUseCases
         data={voipData}
         subHeading={
@@ -180,7 +155,6 @@ const AllIntegrations = () => {
       />
 
       <SecondSection />
-
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
       <PromoBanner />
@@ -188,4 +162,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default SelfService;

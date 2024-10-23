@@ -1,84 +1,67 @@
 import React from "react";
+
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 import TopSection from "../../Components/Services/TopSection";
+import SIPTrunking from "../../Components/Services/SipTrunks";
+import SMSIntegration from "../../Components/Services/SMSIntegration";
+import QuoteRequest from "../../Components/Services/QuoteRequest";
+import DIDPlusZero from "../../Components/Services/DIDplusZero";
+import BigLaptop from "../../Components/Services/BigLaptop";
+import Helicopter from "../../Components/Services/Helicopter";
 
-const AllIntegrations = () => {
+const ForwardSMSDelivery = () => {
   const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
+    beforeText: "Why do customers choose TRADEDID for",
+    afterText: "?",
+    spanText: "calling and messaging",
     subPara: "",
   };
 
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
-    },
-    {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
-    },
-    {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
-    },
-    {
-      title: "Number Selection",
+      title: "Single number for multiple services",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "Voice forwarding and SMS delivery on the same phone number.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
+      title: "Cloud PBX",
+      description: "An extensive set of call scenarios with phone.systems™.",
     },
     {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
+      title: "Full compatibility",
+      description: "Seamless BYOC integration with a platform of your choice.",
     },
     {
-      title: "Developer friendly",
+      title: "Trunk groups",
       description:
-        "Multiple libraries available for key programming languages.",
+        "Full redundancy and load balancing for seamless and highly reliable communications.",
     },
     {
-      title: "Complete API documentation",
+      title: "Trunk configuration profiles",
+      description: "Automated trunk assignment with pre-set configurations.",
+    },
+    {
+      title: "Easy set-up",
       description:
-        "Access to extensive resources with examples for API implementation.",
+        "Instant changes to configurations online via the fully self-service User Portal.",
     },
     {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
-    },
-    {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
+      title: "Strategically placed mega POPs",
       description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
-    },
-    {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+        "Quality, security and low latency using location-based routing.",
     },
   ];
 
   const voipData = [
     {
-      title: "Phone Numbers as a value-added service",
-      description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+      title: "SMS verifications",
+      description: "One-time password SMS verifications for maximum security.",
     },
     {
       title: "Call centers",
@@ -162,23 +145,19 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
-        nextText={""}
-        subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
-        }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
+        preText={"Enhance your business comms with"}
+        spanText={"Voice forwarding and SMS delivery"}
+        nextText={"options"}
+        subheading={"Your calls and text messages delivered anywhere"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
+      <QuoteRequest />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
-
       <SecondSection />
 
       <Testimonial />
@@ -188,4 +167,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default ForwardSMSDelivery;

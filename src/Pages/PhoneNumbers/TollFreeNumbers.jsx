@@ -1,89 +1,76 @@
 import React from "react";
+import TopSection from "../../Components/AllPhoneNumber/TopSection";
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
-import TopSection from "../../Components/Services/TopSection";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 
-const AllIntegrations = () => {
-  const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
-    subPara: "",
-  };
-
+const TollFreeNumbers = () => {
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
-    },
-    {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
-    },
-    {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
-    },
-    {
-      title: "Number Selection",
+      title: "Large Inventory",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "Instantly available Toll Free Virtual Phone Numbers in 64 countries.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
-    },
-    {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
-    },
-    {
-      title: "Developer friendly",
+      title: "Free Unlimited Capacity",
       description:
-        "Multiple libraries available for key programming languages.",
+        "Toll Free Phone Numbers provided with a virtually unlimited incoming call capacity.",
     },
     {
-      title: "Complete API documentation",
+      title: "Flexible Toll Free Pricing",
       description:
-        "Access to extensive resources with examples for API implementation.",
+        "Complete scalability and cost-efficiency with competitive per-minute Toll Free rates.",
     },
     {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
-    },
-    {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
+      title: "Global Toll Free Number Portability",
       description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
+        "Wide porting coverage for the seamless migration of your numbers to TRADEDID free of charge.",
     },
     {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+      title: "99.998% Core Network Uptime",
+      description:
+        "Highly scalable, secure, and fully geo-redundant private network infrastructure with live, in-house monitoring 24/7/365.",
+    },
+    {
+      title: "Licenced Operator for Voice and SMS",
+      description:
+        "Fully licenced operator in 30+ countries with our own numbering resources in multiple geographies.",
+    },
+    {
+      title: "Premium Toll Free Call Quality",
+      description:
+        "Toll Free Phone Numbers combined with premium quality, reliability, and regulatory compliance.",
+    },
+    {
+      title: "Number Selection Tool",
+      description:
+        "Instant access to an extensive global Phone Number inventory, including Gold and Vanity Numbers.",
+    },
+    {
+      title: "Toll Free Forwarding",
+      description: "A wide range of delivery options including SIP and PSTN.",
     },
   ];
 
+  const texts = {
+    beforeText: "Why do customers choose TRADEDID",
+    afterText: "Phone Numbers ? ",
+    spanText: "Toll Free",
+  };
+
   const voipData = [
     {
-      title: "Phone Numbers as a value-added service",
-      description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+      title: "SMS Customer Support",
+      description: "Two-way business and customer communications.",
     },
     {
-      title: "Call centers",
+      title: "Call Center & Queue",
       description:
-        "Empowering call centers with reliable two-way voice communication solutions.",
+        "Call queueing services to ensure that your business never misses an important call.",
     },
   ];
 
@@ -162,25 +149,22 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
-        nextText={""}
+        preText={""}
+        spanText={"Toll Free"}
+        nextText={"Phone Numbers for maximizing your business reachability"}
         subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
+          "Local presence with high reliability and full trunk redundancy globally"
         }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
+      <PriceList />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
-
       <SecondSection />
-
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
       <PromoBanner />
@@ -188,4 +172,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default TollFreeNumbers;

@@ -1,89 +1,71 @@
 import React from "react";
+
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
-import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
-import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
+import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
+import PromoBanner from "../../Components/Home/LastSection";
 import TopSection from "../../Components/Services/TopSection";
+import SIPTrunking from "../../Components/Services/SipTrunks";
 
-const AllIntegrations = () => {
-  const texts = {
-    beforeText: "Why choose",
-    spanText: "phone.systems™",
-    afterText: "provisioning via the API?",
-    subPara: "",
-  };
-
+const SipServices = () => {
   const cardData = [
     {
-      title: "Live inventory management",
-      description: "Instant addition or removal of Phone Numbers.",
-    },
-    {
-      title: "Flexible configuration",
-      description: "Full functionality and unlimited programmable scenarios.",
-    },
-    {
-      title: "Readily accessible coverage",
-      description: "A vast inventory of Phone Numbers available via the API.",
-    },
-    {
-      title: "Number Selection",
+      title: "Quality SIP Trunks",
       description:
-        "Comprehensive phone number search and reservation capabilities.",
+        "SIP traffic delivered via TRADEDID high-capacity platform, for excellent audio quality and rock-solid reliability to maintain a high ASR and ACD.",
     },
     {
-      title: "Cost-efficient solution",
-      description: "Saving money on DID set-up fees.",
-    },
-    {
-      title: "Effortless end-user registration",
-      description: "Automated submission of regulatory data via the API.",
-    },
-    {
-      title: "Developer friendly",
+      title: "Scalable VoIP Network",
       description:
-        "Multiple libraries available for key programming languages.",
+        "Virtually unlimited call Capacity and advanced trunk configurations to support the specific communication needs of operators and enterprises.",
     },
     {
-      title: "Complete API documentation",
+      title: "Wholesale VoIP Termination",
       description:
-        "Access to extensive resources with examples for API implementation.",
+        "A valuable addition to the VoIP service portfolio of a wholesale SIP Trunking provider.",
     },
     {
-      title: "Effortless scalability",
-      description: "Enabling your business growth with minimal resources.",
-    },
-    {
-      title: "Automated onboarding",
-      description: "Giving your customers full self-service capabilities.",
-    },
-    {
-      title: "Suitable for any business case",
-      description: "Freedom to choose your preferred billing model.",
-    },
-    {
-      title: "Open for integrations",
+      title: "API Integration",
       description:
-        "Enriching your VoIP or mobile offering with a cloud PBX solution.",
+        "Remote trunk management via a REST API with real-time call event streaming.",
     },
     {
-      title: "Dedicated administration dashboard",
-      description: "Pre-built Operator UI to minimize development efforts.",
+      title: "PSTN Replacement",
+      description:
+        "Cost saving and innovative cloud-based solution to replace traditional telephony with VoIP SIP Trunks at competitive global rates.",
+    },
+    {
+      title: "Advanced Online Monitoring",
+      description:
+        "Flexible SIP Trunk settings, monitoring tools, and CDRs generated on a per SIP trunk basis.",
+    },
+    {
+      title: "Live Support",
+      description:
+        "Highly professional, customer-oriented network operations and customer support teams available on a 24/7/365 basis.",
     },
   ];
 
+  const texts = {
+    beforeText: "Why do customers choose the TRADEDID",
+    afterText: "solution?",
+    spanText: "two-way SIP Trunking",
+    subPara: "",
+  };
+
   const voipData = [
     {
-      title: "Phone Numbers as a value-added service",
+      title: "PSTN replacement",
       description:
-        "Voice and SMS-enabled Virtual Phone Numbers covering 91 countries and 5259 area codes.",
+        "Premium quality and affordable communications, including Local Dialing and Emergency Services.",
     },
     {
-      title: "Call centers",
+      title: "Call center & queue",
       description:
-        "Empowering call centers with reliable two-way voice communication solutions.",
+        "Call queueing services to ensure that your business never misses an important call.",
     },
   ];
 
@@ -162,25 +144,21 @@ const AllIntegrations = () => {
   return (
     <div>
       <TopSection
-        preText={"Expand your business portfolio with the"}
-        spanText={"DIDWW cloud PBX"}
-        nextText={""}
-        subheading={
-          "Integrate phone.systems™ into your service offerings with the Operator API"
-        }
-        bgImg={"https://www.didww.com/_next/static/media/hill.71af72cb.webp"}
+        preText={"Two-way"}
+        spanText={"SIP Trunking"}
+        nextText={", with mission-critical reliability"}
+        subheading={"Expand your business communications globally"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />
-
+      <SIPTrunking />
+      <PriceList />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
-
       <SecondSection />
-
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
       <PromoBanner />
@@ -188,4 +166,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default SipServices;
