@@ -7,7 +7,7 @@ import NewsUpdate from "../../Components/Dashboard/NewsUpdate";
 import { Outlet } from "react-router-dom";
 
 const Dashboard = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
     <div className="bg-blue-50 min-h-screen">

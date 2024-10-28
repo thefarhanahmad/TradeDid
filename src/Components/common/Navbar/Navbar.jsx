@@ -132,16 +132,33 @@ export const Navbar = () => {
                     : "scale-y-0 opacity-0"
                 }`}
               >
-                {menu.items.map((item, i) => (
-                  <Link
-                    key={i}
-                    to={item?.url}
-                    className="block px-4 py-2 text-[#023f7f] hover:opacity-85 transition duration-200"
-                    onClick={handleLinkClick} // Close dropdown and mobile menu on click
-                  >
-                    {item?.text}
-                  </Link>
-                ))}
+                {menu.items.map((item, i) => {
+                  return (
+                    <div className="">
+                      {item.logo ? (
+                        <div className="pl-3 mb-3">
+                          <Link onClick={handleLinkClick} to={item.url}>
+                            <img
+                              src={item.logo}
+                              alt="logo"
+                              // height={20}
+                              width={60}
+                            />
+                          </Link>
+                        </div>
+                      ) : (
+                        <Link
+                          key={i}
+                          to={item?.url}
+                          className="block px-4 py-2 text-[#023f7f] hover:opacity-85 transition duration-200"
+                          onClick={handleLinkClick} // Close dropdown and mobile menu on click
+                        >
+                          {item?.text}
+                        </Link>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}

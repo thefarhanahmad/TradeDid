@@ -15,8 +15,27 @@ import {
 } from "react-icons/md";
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
-  const location = useLocation();
+  const { pathname } = useLocation();
   const [activeMenu, setActiveMenu] = useState("Dashboard");
+  // console.log("location pathname : ", pathname);
+  // Route matching logic
+  function isRouteMatch(itemPath) {
+    // Extract the last segment from the URL location
+    const urlSegments = pathname?.split("/")?.filter(Boolean);
+    const lastUrlSegment = urlSegments[urlSegments?.length - 1];
+
+    // Extract the last segment from the item path
+    const itemSegments = itemPath?.split("/")?.filter(Boolean);
+    const lastItemSegment = itemSegments[itemSegments?.length - 1];
+
+    // Compare the last segments and return true if they are the same, otherwise false
+    return lastUrlSegment === lastItemSegment;
+  }
+
+  // const itemPath = "phone/buy-numbers";
+
+  // const result = isRouteMatch(itemPath);
+  // console.log("route matched : ", result);
 
   const menuItems = [
     {
@@ -112,7 +131,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
     <div
       className={`sidebar bg-[#134391] text-white h-screen w-64 fixed left-0 top-0 overflow-y-auto transition-transform duration-300 ease-in-out ${
         isOpen ? "translate-x-0" : "-translate-x-full"
-      } lg:translate-x-0`}
+      } md:translate-x-0`}
     >
       <div className="p-4 relative border-b border-[#3265b7] mt-24 md:mt-0 flex justify-between items-center header">
         <Link to={"/"} className="text-2xl font-bold">
@@ -120,7 +139,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         </Link>
         {/* Close button for small devices */}
         <button
-          className="lg:hidden border absolute -right-0 m-1 -top-6"
+          className="md:hidden border absolute -right-0 m-1 -top-6"
           onClick={() => setIsOpen(false)}
         >
           <MdClose size={24} />
@@ -132,8 +151,9 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             {item.path ? (
               <Link
                 to={`${item.path}`}
-                className={`flex items-center w-full p-3 text-left hover:bg-[#3265b7] ${
-                  location.pathname === `${item.path}` ? "bg-[#3265b7]" : ""
+                className={`flex items-center ${
+                  isRouteMatch(item?.path) ? "bg-blue-700" : ""
+                }  w-full p-3 text-left 
                 }`}
                 onClick={() => {
                   setActiveMenu(item.name);
@@ -146,7 +166,9 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             ) : (
               <>
                 <button
-                  className="flex items-center w-full p-3 text-left hover:bg-[#3265b7]"
+                  className={`flex items-center w-full p-3 ${
+                    activeMenu === item.name ? "bg-[#3265b7]" : ""
+                  } text-left hover:bg-[#3265b7]`}
                   onClick={() =>
                     setActiveMenu(activeMenu === item.name ? "" : item.name)
                   }
@@ -160,15 +182,14 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                   />
                 </button>
                 {activeMenu === item.name && item.navLinks && (
-                  <div className="bg-[#3265b7] pl-6 py-1 pr-2">
+                  <div className="bg-[#3265b7]  flex flex-col py-1">
                     {item.navLinks.map((link) => (
                       <Link
                         to={`${link.path}`}
                         key={link.label}
-                        className={`block w-full p-2 text-left hover:bg-blue-700 ${
-                          location.pathname === `${link.path}`
-                            ? "bg-blue-700"
-                            : ""
+                        className={`block w-full p-2 ${
+                          isRouteMatch(link?.path) ? "bg-blue-700" : ""
+                        } text-left pl-14 
                         }`}
                         onClick={() => setIsOpen(false)}
                       >

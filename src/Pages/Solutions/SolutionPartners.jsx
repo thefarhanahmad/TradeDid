@@ -7,8 +7,13 @@ import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
 import TopSection from "../../Components/Services/TopSection";
 import CardWithCompany from "../../Components/Integrations/CardswithLogo";
+import ImageAnimation from "../../Components/Home/ImageAnimation";
+import SelectedCard from "../../Components/Solutions/SelectedCard";
+import QuoteRequest from "../../Components/Services/QuoteRequest";
+import CompanyCards from "../../Components/Solutions/CompaniesCard";
+import SolutionForm from "./SolutionForm";
 
-const AllIntegrations = () => {
+const SolutionPartners = () => {
   const texts = {
     beforeText: "Why choose",
     spanText: "phone.systems™",
@@ -157,58 +162,69 @@ const AllIntegrations = () => {
       ],
     },
   ];
+
   const companiesData = [
     {
-      name: "Ribbon",
+      name: "Invade",
       description:
-        "Combining DIDWW’s powerful two-way SIP trunking with Ribbon’s SBCs SWe Edge & CNe Edge for the ultimate unified communication solution.",
-      logo: "https://www.didww.com/_next/static/media/ribbon.c73129aa.png", // Placeholder image URL
+        "Reliable SIP trunking solution for rapid worldwide deployment",
+      logo: "https://www.didww.com/_next/static/media/invade.1743db41.png", // Placeholder image URL
     },
+
     {
-      name: "Zapier",
+      name: "PBX On The Cloud",
       description:
-        "Easy access to thousands of the most popular apps for business process automation.",
-      logo: "https://www.didww.com/_next/static/media/zapier.6f41d5d4.png", // Placeholder image URL
+        "High quality VoIP services with extensive coverage in Latin America",
+      logo: "https://www.didww.com/_next/static/media/pbx.506565e1.png", // Placeholder image URL
     },
+
     {
-      name: "Genesys",
+      name: "VCC Live",
       description:
-        "Maximum efficiency with collaboration, communications, and contact center services for businesses of any size.",
-      logo: "https://www.didww.com/_next/static/media/genesys.8979786b.png", // Placeholder image URL
-    },
-    {
-      name: "Amazon",
-      description:
-        "Enhanced customer experience with real-time audio, video conferencing and online meeting capabilities combined with phone numbers in over 80 countries.",
-      logo: "https://www.didww.com/_next/static/media/amazon.21d7fe7e.png", // Placeholder image URL
-    },
-    {
-      name: "Pabbly",
-      description:
-        "Streamline your business Voice and SMS services while accessing 1,500+ web applications to boost productivity.",
-      logo: "https://www.didww.com/_next/static/media/pabbly.9b91e28f.png", // Placeholder image URL
+        "Business expansion with an unrivaled range of top quality services",
+      logo: "https://www.didww.com/_next/static/media/vcc-live.fd61f37a.png", // Placeholder image URL
     },
   ];
+
+  const solutionPartnersData = [
+    {
+      name: "PortaOne",
+      description:
+        "PortaOne creates software solutions that enable VoIP service providers and carriers to offer multiple telecommunication services with just a single software platform. PortaOne products are built around a converged VoIP billing software platform combined with a class 4–5 SIP soft switch and media applications for conferencing, IVR and unified messaging.",
+      logo: "https://www.didww.com/_next/static/media/porta-one-logo.4da23c61.webp", // Placeholder image URL
+    },
+    {
+      name: "Telinta",
+      description:
+        "Telinta, founded in 2002, offers secure and reliable cloud-based solutions for VoIP service providers. Their extensive portfolio of white label solutions is highly customizable for a wide range of applications. TeliCore™ is a robust platform, integrating world-class carrier-grade switching and billing capabilities, brandable portals, mobile and desktop softphones, and more.",
+      logo: "https://www.didww.com/_next/static/media/telinta-logo.636ca6bf.webp", // Placeholder image URL
+    },
+    {
+      name: "New Concept Technologies (NCT)",
+      description:
+        "New Concept Technologies (NCT) is a leading application development and telecommunications company with offices in Australia and the USA, supported by a global resellers network. Their products are compatible with SIP-based applications/equipment manufactured around the world. NCT solutions are highly scalable, user-friendly, modular, flexible and integrated with a mature VoIP billing system, provisioning system, auto-configuration system and offer a variety of other advanced features.",
+      logo: "https://www.didww.com/_next/static/media/concept-logo.43aa7e2e.webp", // Placeholder image URL
+    },
+  ];
+
   return (
     <div>
       <TopSection
-        preText={""}
-        spanText={"Integrations"}
-        nextText={"for powerful communications"}
-        subheading={
-          "Bring high quality Voice and SMS services to your existing platforms"
-        }
+        preText={"TRADEDID"}
+        spanText={"Solution partners"}
+        nextText={"to enhance your business"}
+        subheading={"Technology partners that improve your operations"}
         bgImg={
-          "https://c4.wallpaperflare.com/wallpaper/712/806/489/alabama-hills-4k-amazing-desktop-wallpaper-preview.jpg"
+          "https://img.freepik.com/premium-photo/green-grass-red-flowers-hill-blue-sky-with-clouds-spring-flowers-field-background_124717-1459.jpg"
         }
       />
-      <CardWithCompany
-        data={companiesData}
-        preText={"Bring Your Own Carrier (BYOC)"}
-        subHeading={
-          "  TRADEDID services to complement UCaaS, CCaaS, CPaaS providers and other communication platforms"
-        }
+      <CompanyCards
+        companies={solutionPartnersData}
+        preText={"Solution"}
+        spanText={"Partners"}
       />
+      <SolutionForm />
+      <SecondSection />
 
       <VoIPUseCases
         data={voipData}
@@ -217,8 +233,6 @@ const AllIntegrations = () => {
         }
       />
 
-      <SecondSection />
-
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
       <PromoBanner />
@@ -226,4 +240,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default SolutionPartners;

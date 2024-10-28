@@ -81,6 +81,26 @@ import BillReports from "./Pages/Dashboard/Billing/BillReports";
 import BillPayments from "./Pages/Dashboard/Billing/BillPayments";
 import BillOrders from "./Pages/Dashboard/Billing/BillOrders";
 import BillInvoices from "./Pages/Dashboard/Billing/BillInvoices";
+import AmazonIntegration from "./Pages/Integrations/AmazonIntegration";
+import ZenesysIntegration from "./Pages/Integrations/ZenesysIntegration";
+import RibbonIntegration from "./Pages/Integrations/RibbonIntegration";
+import ZappierIntegaration from "./Pages/Integrations/ZappierIntegration";
+import PabblyIntegration from "./Pages/Integrations/PabblyIntegration";
+import Operator from "./Pages/Solutions/Operator";
+import Enterprise from "./Pages/Solutions/Enterprise";
+import UseCases from "./Pages/Solutions/UseCases";
+import SuccessStories from "./Pages/Solutions/SuccessStories";
+import SolutionPartners from "./Pages/Solutions/SolutionPartners";
+import GlobalCoverage from "./Pages/Coverage&Prices/GlobalCoverage";
+import DIDPricing from "./Pages/Coverage&Prices/DIDPricing";
+import SIPTrunkPricing from "./Pages/Coverage&Prices/SIPTrunkPricing";
+import RegulatoryRequirements from "./Pages/Coverage&Prices/RegulatoryRequirement";
+import Documentation from "./Pages/Resources/Documentation";
+import Networks from "./Pages/Resources/Network";
+import Blog from "./Pages/Resources/Blog";
+import ContactUs from "./Pages/Resources/Contacts";
+import AboutUs from "./Pages/Resources/AboutUs";
+import EbookLibrary from "./Pages/Resources/EbookLibrary";
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.auth);
   const location = useLocation();
@@ -169,6 +189,56 @@ function App() {
           path="/Integrations/all-integration"
           element={<AllIntegrations />}
         />
+        <Route
+          path="/Integrations/amazon-integration"
+          element={<AmazonIntegration />}
+        />
+        <Route
+          path="/Integrations/genesys-integration"
+          element={<ZenesysIntegration />}
+        />
+        <Route
+          path="/Integrations/ribbon-integration"
+          element={<RibbonIntegration />}
+        />
+        <Route
+          path="/Integrations/zapier-integration"
+          element={<ZappierIntegaration />}
+        />
+        <Route
+          path="/Integrations/pabbly-integration"
+          element={<PabblyIntegration />}
+        />
+
+        {/* Solutions */}
+        <Route path="/solutions/operator" element={<Operator />} />
+        <Route path="/solutions/enterprise" element={<Enterprise />} />
+        <Route path="/solutions/use-cases" element={<UseCases />} />
+        <Route path="/solutions/success-stories" element={<SuccessStories />} />
+        <Route
+          path="/solutions/solution-partners"
+          element={<SolutionPartners />}
+        />
+
+        {/* Coverage and Prices */}
+        <Route path="/coverage-prices/coverage" element={<GlobalCoverage />} />
+        <Route path="/coverage-prices/did-pricing" element={<DIDPricing />} />
+        <Route
+          path="/coverage-prices/sip-trunking-pricing"
+          element={<SIPTrunkPricing />}
+        />
+        <Route
+          path="/coverage-prices/regulatory-requirements"
+          element={<RegulatoryRequirements />}
+        />
+
+        {/* Resources */}
+        <Route path="/resources/documentation" element={<Documentation />} />
+        <Route path="/resources/network" element={<Networks />} />
+        <Route path="/resources/blog" element={<Blog />} />
+        <Route path="/resources/contacts" element={<ContactUs />} />
+        <Route path="/resources/about-us" element={<AboutUs />} />
+        <Route path="/resources/e-book-library" element={<EbookLibrary />} />
 
         {/* Dashboard */}
         <Route path="/dashboard" element={<Dashboard />}>

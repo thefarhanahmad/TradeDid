@@ -49,27 +49,62 @@ export const navData = [
     label: "Integrations",
     items: [
       { text: "All Integrations", url: "/Integrations/all-integration" },
-      { text: "Operator", url: "/integrations/operator" },
-      { text: "Enterprise", url: "/integrations/enterprise" },
+      {
+        text: "Amazon",
+        logo: "https://www.didww.com/_next/static/media/amazon.21d7fe7e.png",
+        url: "/integrations/amazon-integration",
+      },
+      {
+        text: "Genesys",
+        logo: "https://www.didww.com/_next/static/media/genesys.8979786b.png",
+        url: "/integrations/genesys-integration",
+      },
+      {
+        text: "Ribbon",
+        logo: "https://www.didww.com/_next/static/media/ribbon.c73129aa.png",
+        url: "/integrations/ribbon-integration",
+      },
+      {
+        text: "Zapier",
+        logo: "https://www.didww.com/_next/static/media/zapier.6f41d5d4.png",
+        url: "/Integrations/zapier-integration",
+      },
+      {
+        text: "Pabbly",
+        logo: "https://www.didww.com/_next/static/media/pabbly.9b91e28f.png",
+        url: "/integrations/pabbly-integration",
+      },
     ],
   },
   {
     label: "Solutions",
     items: [
-      { text: "Coverage", url: "/solutions/coverage" },
-      { text: "DID Pricing", url: "/solutions/did-pricing" },
-      { text: "SIP Trunking Pricing", url: "/solutions/sip-trunking-pricing" },
+      { text: "Operator", url: "/solutions/operator" },
+      { text: "Enterprise", url: "/solutions/enterprise" },
+      { text: "Use Cases", url: "/solutions/use-cases" },
       {
-        text: "Regulatory Requirements",
-        url: "/solutions/regulatory-requirements",
+        text: "Success Stories",
+        url: "/solutions/success-stories",
+      },
+      {
+        text: "Solution Partners",
+        url: "/solutions/solution-partners",
       },
     ],
   },
   {
     label: "Coverage & Prices",
     items: [
-      { text: "Global Coverage", url: "/coverage-prices/global-coverage" },
-      { text: "Pricing", url: "/coverage-prices/pricing" },
+      { text: "Global Coverage", url: "/coverage-prices/coverage" },
+      { text: "DID Pricing", url: "/coverage-prices/did-pricing" },
+      {
+        text: "SIP Trunking Pricing",
+        url: "/coverage-prices/sip-trunking-pricing",
+      },
+      {
+        text: "Regulatory Requirements",
+        url: "/coverage-prices/regulatory-requirements",
+      },
     ],
   },
   {

@@ -22,26 +22,34 @@ const ImageAnimation = () => {
   ];
 
   return (
-    <div className="overflow-hidden relative h-32 mt-6">
-      <div className="flex animate-slide">
-        {/* Map over the images and display them */}
-        {images.map((image, i) => (
-          <img
-            key={i}
-            src={image}
-            className="w-52 h-full object-cover"
-            alt={`img ${i + 1}`}
-          />
-        ))}
-        {/* Duplicate images for continuous effect */}
-        {images.map((image, i) => (
-          <img
-            key={`duplicate-${i}`}
-            src={image}
-            className="w-48 h-full object-cover"
-            alt={`img ${i + 1}`}
-          />
-        ))}
+    <div className=" py-16 flex flex-col gap-10">
+      <header className="text-center">
+        <h1 className="text-4xl font-bold text-[#023f7f]">
+          Over <span className="text-orange-500 mx-2">1000</span> industry
+          leaders rely on TRADEDID
+        </h1>
+      </header>
+      <div className="overflow-hidden relative h-32">
+        <div className="flex animate-slide">
+          {/* Map over the images and display them */}
+          {images.map((image, i) => (
+            <img
+              key={i}
+              src={image}
+              className="w-52 h-full object-cover"
+              alt={`img ${i + 1}`}
+            />
+          ))}
+          {/* Duplicate images for continuous effect */}
+          {images.map((image, i) => (
+            <img
+              key={`duplicate-${i}`}
+              src={image}
+              className="w-48 h-full object-cover"
+              alt={`img ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

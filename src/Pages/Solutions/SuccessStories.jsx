@@ -7,8 +7,11 @@ import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
 import TopSection from "../../Components/Services/TopSection";
 import CardWithCompany from "../../Components/Integrations/CardswithLogo";
+import ImageAnimation from "../../Components/Home/ImageAnimation";
+import SelectedCard from "../../Components/Solutions/SelectedCard";
+import QuoteRequest from "../../Components/Services/QuoteRequest";
 
-const AllIntegrations = () => {
+const SuccessStories = () => {
   const texts = {
     beforeText: "Why choose",
     spanText: "phone.systems™",
@@ -157,67 +160,59 @@ const AllIntegrations = () => {
       ],
     },
   ];
+
   const companiesData = [
     {
-      name: "Ribbon",
+      name: "Invade",
       description:
-        "Combining DIDWW’s powerful two-way SIP trunking with Ribbon’s SBCs SWe Edge & CNe Edge for the ultimate unified communication solution.",
-      logo: "https://www.didww.com/_next/static/media/ribbon.c73129aa.png", // Placeholder image URL
+        "Reliable SIP trunking solution for rapid worldwide deployment",
+      logo: "https://www.didww.com/_next/static/media/invade.1743db41.png", // Placeholder image URL
     },
+
     {
-      name: "Zapier",
+      name: "PBX On The Cloud",
       description:
-        "Easy access to thousands of the most popular apps for business process automation.",
-      logo: "https://www.didww.com/_next/static/media/zapier.6f41d5d4.png", // Placeholder image URL
+        "High quality VoIP services with extensive coverage in Latin America",
+      logo: "https://www.didww.com/_next/static/media/pbx.506565e1.png", // Placeholder image URL
     },
+
     {
-      name: "Genesys",
+      name: "VCC Live",
       description:
-        "Maximum efficiency with collaboration, communications, and contact center services for businesses of any size.",
-      logo: "https://www.didww.com/_next/static/media/genesys.8979786b.png", // Placeholder image URL
-    },
-    {
-      name: "Amazon",
-      description:
-        "Enhanced customer experience with real-time audio, video conferencing and online meeting capabilities combined with phone numbers in over 80 countries.",
-      logo: "https://www.didww.com/_next/static/media/amazon.21d7fe7e.png", // Placeholder image URL
-    },
-    {
-      name: "Pabbly",
-      description:
-        "Streamline your business Voice and SMS services while accessing 1,500+ web applications to boost productivity.",
-      logo: "https://www.didww.com/_next/static/media/pabbly.9b91e28f.png", // Placeholder image URL
+        "Business expansion with an unrivaled range of top quality services",
+      logo: "https://www.didww.com/_next/static/media/vcc-live.fd61f37a.png", // Placeholder image URL
     },
   ];
+
   return (
     <div>
       <TopSection
-        preText={""}
-        spanText={"Integrations"}
-        nextText={"for powerful communications"}
+        preText={"Customer"}
+        spanText={"success"}
+        nextText={"stories"}
         subheading={
-          "Bring high quality Voice and SMS services to your existing platforms"
+          "From enterprise to operator - how industry leaders empower their businesses with TRADEDID"
         }
         bgImg={
-          "https://c4.wallpaperflare.com/wallpaper/712/806/489/alabama-hills-4k-amazing-desktop-wallpaper-preview.jpg"
+          "https://img.freepik.com/premium-photo/green-grass-red-flowers-hill-blue-sky-with-clouds-spring-flowers-field-background_124717-1459.jpg"
         }
       />
       <CardWithCompany
         data={companiesData}
-        preText={"Bring Your Own Carrier (BYOC)"}
-        subHeading={
-          "  TRADEDID services to complement UCaaS, CCaaS, CPaaS providers and other communication platforms"
-        }
+        spanText={"Success"}
+        nextText={"stories"}
       />
+      <QuoteRequest />
+      {/* <ImageAnimation />
+      <SelectedCard /> */}
 
+      <SecondSection />
       <VoIPUseCases
         data={voipData}
         subHeading={
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
-
-      <SecondSection />
 
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
@@ -226,4 +221,4 @@ const AllIntegrations = () => {
   );
 };
 
-export default AllIntegrations;
+export default SuccessStories;

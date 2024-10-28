@@ -76,13 +76,6 @@ export default function SecondSection() {
             </button>
           </div>
         </div>
-
-        <header className="text-center mt-20">
-          <h1 className="text-3xl font-bold mb-4 text-[#023f7f]">
-            Over <span className="text-orange-500 mx-2">1000</span> industry
-            leaders rely on TRADEDID
-          </h1>
-        </header>
       </div>
     </div>
   );
