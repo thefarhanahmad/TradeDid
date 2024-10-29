@@ -82,13 +82,13 @@ export const Navbar = () => {
       }`}
       style={{ height: "80px", paddingBottom: "10px" }} // Keep padding consistent
     >
-      <div className="flex justify-between md:justify-evenly items-center w-[90%] mx-auto h-full">
+      <div className="flex justify-between md:justify-evenly items-center  w-[90%] mx-auto h-full">
         {/* Logo */}
         <Link to={"/"}>
           <img
             src={Logo}
             width={150}
-            className="p-1 rounded cursor-pointer"
+            className=" p-1 rounded cursor-pointer"
             alt="Logo"
           />
         </Link>
@@ -96,10 +96,10 @@ export const Navbar = () => {
         {/* Navigation Items */}
         <div
           ref={mobileMenuRef} // Attach the ref here
-          className={`gap-7 text-[#023f7f] font-sans ${
+          className={` gap-6 text-[#023f7f] font-sans ${
             isMobileMenuOpen
               ? "flex-col absolute flex justify-center items-center bg-white shadow-lg w-full top-[80px] py-10 left-0 z-40"
-              : "hidden md:flex"
+              : "hidden md:flex "
           }`}
         >
           {navData?.map((menu, index) => (
@@ -109,7 +109,7 @@ export const Navbar = () => {
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
-              <div className="flex justify-center w-fit items-center cursor-pointer">
+              <div className="flex justify-center   items-center cursor-pointer">
                 <span
                   className={`transition text-[#023f7f] ${
                     isScrolledPastTop ? "opacity-100" : "opacity-85"
