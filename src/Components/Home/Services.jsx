@@ -1,7 +1,4 @@
-import Blob from "../../assets/blob.png";
-import bg from "../../assets/bg-service.svg";
-
-import ServiceCard from "./ServiceCard";
+import SwiperContent from "./ServiceCard";
 
 const Services = () => {
   const phoneNumberData = [
@@ -108,29 +105,28 @@ const Services = () => {
 
   return (
     <div
+      className="flex flex-col py-12 relative min-h-screen"
       style={{
-        backgroundImage: `url(${bg})`,
+        backgroundImage: `url("https://t4.ftcdn.net/jpg/02/10/45/95/360_F_210459536_XmLDEcKq2DpeNLVmheuWeu9NM9aGKnih.jpg")`, // Set your background image
+        backgroundRepeat: "no-repeat", // Prevent image repetition
+        backgroundSize: "cover", // Ensure the background image covers the entire div
       }}
-      className="flex bg-gradient-to-b from-cyan-100 to-cyan-50 relative flex-col items-center p-8 md:p-16"
     >
-      <img
-        src={Blob}
-        alt="blob"
-        className="up-down-animation absolute w-60 opacity-50 z-0"
-      />
-      <div className="text-center  z-10">
-        <h1 className="text-3xl font-semibold">Our Services</h1>
-        <p className="text-lg mt-4 mb-8 ">
+      {/* Overlay to improve text readability */}
+      {/* <div className="absolute inset-0 bg-black opacity-30 z-0"></div> */}
+
+      <div className="text-center z-10 relative">
+        <h1 className="text-3xl font-semibold text-[#023f7f]">Our Services</h1>
+        <p className="text-lg mt-4 mb-8 text-[#023f7f]">
           Get VoIP Building blocks for telecom or business professionals
         </p>
       </div>
 
-      {/* Card */}
-      <div className="flex flex-col gap-7">
-        <ServiceCard data={phoneNumberData} heading={"Phone Numbers"} />
-        <ServiceCard data={trunkData} heading={"Voice and SMS trunks"} />
-        <ServiceCard data={capacityData} heading={"Capacity"} />
-        <ServiceCard
+      <div className="w-11/12 mx-auto flex flex-col gap-7 z-10 relative">
+        <SwiperContent data={phoneNumberData} heading={"Phone Numbers"} />
+        <SwiperContent data={trunkData} heading={"Voice and SMS trunks"} />
+        <SwiperContent data={capacityData} heading={"Capacity"} />
+        <SwiperContent
           data={serviceData}
           heading={"Emergency, Porting, Forwarding, Fax"}
         />

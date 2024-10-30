@@ -1,63 +1,67 @@
 import React from "react";
-import serviceBg from "../../assets/service-card.jpg";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-// import required modules
-import { EffectCoverflow, Pagination } from "swiper/modules";
+// Import required modules
+import { Pagination, Autoplay } from "swiper/modules";
 
-const ServiceCard = ({ heading, data }) => {
+export default function SwiperContent({ data, heading }) {
   return (
-    <div className="border z-10 border-cyan-400 p-4 rounded-md">
-      <div className="text-white">
-        <h1 className="text-2xl font-bold text-start text-black mb-3">
-          {heading}
-        </h1>
-
-        {/* Cards */}
-        <div className=" bg-red-400 overflow-hidden">
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={false}
-            slidesPerView={"auto"}
-            coverflowEffect={{
-              rotate: 25,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            pagination={true}
-            modules={[EffectCoverflow, Pagination]}
-            className="mySwiper"
-          >
-            {data.map((item, index) => (
-              <SwiperSlide>
-                <div
-                  key={index}
-                  style={{
-                    backgroundImage: `url(${serviceBg})`,
-                  }}
-                  className="relative h-[200px]  border border-cyan-200 text-black rounded-lg p-6 overflow-hidden transition-transform duration-300 hover:scale-[1.02] group"
-                >
-                  <div className="relative z-10 ">
-                    <h2 className="text-xl font-semibold mb-4">{item.title}</h2>
-                    <p>{item.description}</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </div>
+    <div className="w-full overflow-hidden">
+      <h1 className="mb-2 text-2xl text-[#023f7f]">{heading}</h1>
+      <Swiper
+        pagination={true}
+        modules={[Pagination, Autoplay]} // Add Autoplay module
+        className="mySwiper"
+        spaceBetween={0}
+        loop={true} // Enable looping
+        autoplay={{
+          delay: 3000, // Time between slides (in milliseconds)
+          disableOnInteraction: false, // Allow autoplay to continue after user interactions
+        }}
+        breakpoints={{
+          640: {
+            // For small devices
+            slidesPerView: 1, // 1 slide
+            spaceBetween: 0, // No space
+          },
+          768: {
+            // For medium devices (tablets)
+            slidesPerView: 2, // 2 slides
+            spaceBetween: 20, // Space between slides
+          },
+          1024: {
+            // For large devices (laptops and desktops)
+            slidesPerView: 3, // 3 slides
+            spaceBetween: 20, // Space between slides
+          },
+        }}
+      >
+        {data?.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div
+              style={{
+                backgroundImage:
+                  "url('https://webgradients.com/public/webgradients_png/015%20Mean%20Fruit.png')",
+                backgroundRepeat: "no-repeat", // Prevent image repetition
+                backgroundSize: "cover", // Ensure the background image covers the entire div
+              }}
+              className="border overflow-hidden rounded-xl mx-auto w-full h-64 flex items-center justify-center text-center"
+            >
+              <div className="p-4">
+                <h2 className="text-black font-bold text-xl mb-2">
+                  {item.title}
+                </h2>
+                <p className="text-black">{item.description}</p>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
-};
-
-export default ServiceCard;
+}

@@ -13,7 +13,7 @@ import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper/modules";
 
 const BusinessCard = ({ data, heading }) => {
   return (
-    <div className="flex flex-col overflow-hidden bg-slate-200  pt-8 pr-3">
+    <div className="flex flex-col overflow-hidden  pt-8 pr-3">
       <h1 className="text-2xl ml-14 text-[#023f7f]">{heading}</h1>
       <Swiper
         slidesPerView={1} // Default for small screens
@@ -45,7 +45,9 @@ const BusinessCard = ({ data, heading }) => {
             <div className="w-full h-56 p-5   mb-2 px-8 flex  items-center justify-center">
               <span
                 style={{
-                  backgroundImage: `url(${linkBg})`,
+                  backgroundImage: `url("https://img.freepik.com/free-vector/modern-flowing-colorful-wave-banner-background_1035-19861.jpg?semt=ais_hybrid")`,
+                  backgroundRepeat: "no-repeat", // Prevent image repetition
+                  backgroundSize: "cover", // Ensure the background image covers the entire div
                 }}
                 className="text-lg  p-5 rounded-md border border-[#7fb2ea] overflow-hidden w-[92%] h-full relative cursor-pointer flex justify-center group bg-white items-center font-semibold"
               >

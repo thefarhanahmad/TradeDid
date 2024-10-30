@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -26,10 +30,6 @@ body {
   overflow-x: hidden;
   font-family: "Roobert", Arial, sans-serif; /* Fallback fonts */
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @keyframes slide {
   0% {
@@ -154,4 +154,9 @@ body {
   .swiper-slide {
     margin: 0px 0px; /* Adjust margin for smaller screens */
   }
+}
+
+.slider-container {
+  padding: 10px;
+  overflow: hidden;
 }

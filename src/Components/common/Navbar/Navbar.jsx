@@ -134,7 +134,7 @@ export const Navbar = () => {
               >
                 {menu.items.map((item, i) => {
                   return (
-                    <div className="">
+                    <div key={i} className="">
                       {item.logo ? (
                         <div className="pl-3 mb-3">
                           <Link onClick={handleLinkClick} to={item.url}>
