@@ -1,5 +1,5 @@
 import React from "react";
-import TopSection from "../../Components/Services/TopSection";
+import TopSection from "../../Components/common/TopSection";
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
 import PriceList from "../../Components/AllPhoneNumber/PriceList";
 import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";

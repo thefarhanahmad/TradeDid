@@ -1,5 +1,4 @@
 import React from "react";
-import map from "../../assets/map.png";
 
 const TopSection = ({ preText, spanText, nextText, subheading, bgImg }) => {
   return (
@@ -46,7 +45,6 @@ const TopSection = ({ preText, spanText, nextText, subheading, bgImg }) => {
               Sign Up Now
             </button>
           </div>
-          {/* <CountriesSection /> */}
         </div>
       </div>
     </div>

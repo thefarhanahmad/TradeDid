@@ -45,11 +45,11 @@ const TopSection = () => {
       }}
     >
       <div className="p-8 text-white h-[72%] md:w-[69%] w-[100%]  mx-auto flex flex-col gap-4 justify-center items-center text-center md:text-start md:items-start">
-        <h1 className="text-3xl md:text-5xl font-bold mb-2 text-[#023f7f]">
+        <h1 className="text-2xl md:text-5xl font-bold mb-2 text-[#023f7f]">
           Remove the boundaries
         </h1>
         <p
-          className={`text-2xl md:text-4xl mb-4 text-orange-500 ml-1 transition-opacity duration-500 ${
+          className={`text-xl md:text-4xl mb-4 text-orange-500 ml-1 transition-opacity duration-500 ${
             fade ? "opacity-100" : "opacity-0"
           }`}
         >

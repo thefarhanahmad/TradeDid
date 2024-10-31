@@ -4,7 +4,7 @@ import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
 import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
-import TopSection from "../../Components/Services/TopSection";
+import TopSection from "../../Components/common/TopSection";
 import CompanyCards from "../../Components/Solutions/CompaniesCard";
 import SolutionForm from "../Solutions/SolutionForm";
 import DIDNumbersSection from "../../Components/AllPhoneNumber/DIDNumSection";
@@ -201,8 +201,7 @@ const DIDPricing = () => {
         }
       />
       <DIDNumbersSection texts={texts} data={cardData} />
-      <PriceList/>
- 
+      <PriceList />
 
       <VoIPUseCases
         data={voipData}
@@ -210,7 +209,7 @@ const DIDPricing = () => {
           "Learn what you can build with TRADEDID cloud communications"
         }
       />
-<SecondSection/>
+      <SecondSection />
       <Testimonial />
       <HoverBoxes data={hoverBoxes} />
       <PromoBanner />

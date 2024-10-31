@@ -7,7 +7,7 @@ import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
 import HoverBoxes from "../../Components/AllPhoneNumber/HoverBoxes";
 import PromoBanner from "../../Components/Home/LastSection";
-import TopSection from "../../Components/Services/TopSection";
+import TopSection from "../../Components/common/TopSection";
 import SIPTrunking from "../../Components/Services/SipTrunks";
 import SMSIntegration from "../../Components/Services/SMSIntegration";
 import QuoteRequest from "../../Components/Services/QuoteRequest";

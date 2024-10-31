@@ -38,7 +38,7 @@ export default function Testimonial() {
   ];
 
   return (
-    <div className="bg-[#e6f9ff]  py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#e6f9ff] py-8 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl h-full mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[#003366] mb-12">
           Trusted by professionals
@@ -59,7 +59,7 @@ export default function Testimonial() {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index} className="h-full ">
-                <div className="bg-white  h-80 md:h-96 rounded-lg shadow-lg p-6 flex flex-col justify-between">
+                <div className="bg-white h-96 rounded-lg shadow-lg p-6 flex flex-col justify-between">
                   <div>
                     <h3 className="text-xl font-semibold text-[#003366]">
                       {testimonial.name}

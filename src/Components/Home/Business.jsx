@@ -43,12 +43,12 @@ const Business = () => {
           alt="cloud"
           className="animated-image w-full h-70%" // Adjusted to ensure the image fits well
         /> */}
-        <h1 className="text-4xl text-black z-10 text-center">
+        <h1 className="text-2xl md:text-4xl text-black z-10 text-center">
           <span className="text-[#023f7f]">Discover</span> how to grow your
           business with TRADEDID use cases
         </h1>
       </div>
-      <div className="w-[90%] mx-auto">
+      <div className="w-full md:w-[90%] mx-auto ">
         <BusinessCard data={voiceUses} heading={"Voice use cases"} />
         <BusinessCard data={smsUses} heading={"SMS use cases"} />
         <BusinessCard data={businessTelephony} heading={"Business telephony"} />

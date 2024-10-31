@@ -23,17 +23,17 @@ const PromoBanner = () => {
   return (
     <>
       {" "}
-      <div className="flex flex-col items-center py-20 overflow-x-hidden  min-h-screen bg-gradient-to-b from-white to-blue-100 p-4">
-        <h1 className="text-4xl font-bold text-[#023f7f]  mb-4">
+      <div className="flex flex-col items-center py-12 md:py-20 overflow-x-hidden  min-h-screen bg-gradient-to-b from-white to-blue-100 p-4">
+        <h1 className="text-2xl md:text-4xl font-bold  text-[#023f7f] mb-2 md:mb-4">
           Are you ready to
         </h1>
-        <h2 className="text-4xl font-bold text-orange-600 mb-4">
+        <h2 className="text-2xl md:text-4xl font-bold text-orange-600mb-2 md:mb-4">
           remove the boundaries?
         </h2>
-        <p className="text-lg text-blue-700 mb-8">
+        <p className="text-lg text-center text-blue-700 mb-8">
           Create or expand your cloud telecommunications
         </p>
-        <div className="flex space-x-4 mb-12">
+        <div className="flex space-x-4 mb-6 md:mb-12">
           <button className="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600">
             Sign up now
           </button>
@@ -62,7 +62,7 @@ const PromoBanner = () => {
             >
               <div>
                 {/* Image Section */}
-                <div className="bg-gray-300 h-52 rounded-lg overflow-hidden mb-4">
+                <div className="bg-gray-300 h-52 rounded-lg overflow-hiddenmb-2 md:mb-4">
                   <img
                     className="w-full h-full object-cover"
                     src={card.imgSrc}

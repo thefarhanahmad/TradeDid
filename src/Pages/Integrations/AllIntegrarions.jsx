@@ -5,7 +5,7 @@ import VoIPUseCases from "../../Components/AllPhoneNumber/VipUseCases";
 import PromoBanner from "../../Components/Home/LastSection";
 import SecondSection from "../../Components/Home/SecondSection";
 import Testimonial from "../../Components/Home/Testimonials";
-import TopSection from "../../Components/Services/TopSection";
+import TopSection from "../../Components/common/TopSection";
 import CardWithCompany from "../../Components/Integrations/CardswithLogo";
 
 const AllIntegrations = () => {

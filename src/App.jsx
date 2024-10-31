@@ -1,6 +1,5 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import { Footer } from "./Components/common/Footer/Footer";
-import { Navbar } from "./Components/common/Navbar/Navbar";
+
 import AuthPage from "./Pages/Authentication/AuthPage";
 import HomePage from "./Pages/HomePage";
 import RegisterForm from "./Components/Auth/RegisterForm";
@@ -101,6 +100,8 @@ import Blog from "./Pages/Resources/Blog";
 import ContactUs from "./Pages/Resources/Contacts";
 import AboutUs from "./Pages/Resources/AboutUs";
 import EbookLibrary from "./Pages/Resources/EbookLibrary";
+import { Footer } from "./Components/common/Footer";
+import { Navbar } from "./Components/common/Navbar";
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.auth);
   const location = useLocation();

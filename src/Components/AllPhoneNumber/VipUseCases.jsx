@@ -49,24 +49,6 @@ const VoIPUseCases = ({ subHeading, data }) => {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-4 left-4">
-          <div className="bg-orange-500 p-2 rounded-full">
-            <svg
-              className="w-6 h-6 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M8 10h.01M12 10h.01M16 10h.01M21 16.5A2.5 2.5 0 0018.5 14h-13A2.5 2.5 0 003 16.5v.5a2.5 2.5 0 002.5 2.5h13a2.5 2.5 0 002.5-2.5v-.5z"
-              ></path>
-            </svg>
-          </div>
-        </div>
       </div>
     </div>
   );

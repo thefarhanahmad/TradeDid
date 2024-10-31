@@ -23,8 +23,8 @@ const ImageAnimation = () => {
 
   return (
     <div className=" py-16 flex flex-col gap-10">
-      <header className="text-center">
-        <h1 className="text-4xl font-bold text-[#023f7f]">
+      <header className="text-center w-11/12">
+        <h1 className="text-2xl md:text-4xl font-bold text-[#023f7f]">
           Over <span className="text-orange-500 mx-2">1000</span> industry
           leaders rely on TRADEDID
         </h1>

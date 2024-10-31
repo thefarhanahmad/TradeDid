@@ -66,13 +66,13 @@ export default function SecondSection() {
 
   return (
     <div className="w-full overflow-hidden">
-      <div className="max-w-5xl mx-auto px-4 pb-8 py-16 md:py-20 font-sans">
+      <div className="max-w-5xl mx-auto px-4 pb-8 pt-12 md:py-20 font-sans">
         <header className="text-center px-1 mb-10">
-          <h1 className="text-3xl font-bold mb-4 text-[#023f7f]">
+          <h1 className="text-2xl md:text-3xl font-bold mb-4 text-[#023f7f]">
             <span>Why do customers choose</span>
             <span className="text-orange-500 mx-2">TRADEDID</span>?
           </h1>
-          <p className="text-2xl text-[#023f7f]">
+          <p className="text-lg md:text-2xl text-[#023f7f]">
             The VoIP platform for telecommunication and business professionals
           </p>
         </header>
@@ -109,7 +109,7 @@ export default function SecondSection() {
             <div
               className={`md:w-[40%] p-6 flex flex-col justify-center ${data[selectedIndex].bg} ${data[selectedIndex].text}`}
             >
-              <h2 className="text-2xl font-bold mb-4">
+              <h2 className="text-xl md:text-2xl font-bold mb-4">
                 {data[selectedIndex].heading}
               </h2>
               <p className="mb-4">{data[selectedIndex].description}</p>
@@ -120,7 +120,7 @@ export default function SecondSection() {
           </div>
         </div>
         {/* Mobile Views swiper */}
-        <div className="flex md:hidden">
+        <div className="flex md:hidden overflow-hidden">
           <Swiper
             pagination={true}
             modules={[Pagination, Autoplay]} // Add Autoplay module
@@ -157,13 +157,15 @@ export default function SecondSection() {
                       src={item?.image}
                       alt={item?.heading}
                       width={600}
-                      className="w-full h-[400px] object-cover"
+                      className="w-full h-[200px] md:h-[400px] object-cover"
                     />
                   </div>
                   <div
                     className={`md:w-[40%] p-6 flex flex-col justify-center ${item?.bg} ${item?.text}`}
                   >
-                    <h2 className="text-2xl font-bold mb-4">{item?.heading}</h2>
+                    <h2 className="text-xl md:text-2xl font-bold mb-4">
+                      {item?.heading}
+                    </h2>
                     <p className="mb-4">{item?.description}</p>
                     <button className="bg-orange-500 text-white py-2 px-4 rounded-2xl self-start hover:bg-orange-600 transition-colors">
                       See our coverage

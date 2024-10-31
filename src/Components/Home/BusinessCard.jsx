@@ -24,6 +24,7 @@ const BusinessCard = ({ data, heading }) => {
         keyboard={{
           enabled: true,
         }}
+        spaceBetween={0}
         breakpoints={{
           // Breakpoints for larger screens
           769: {
@@ -42,14 +43,14 @@ const BusinessCard = ({ data, heading }) => {
       >
         {data.map((item, i) => (
           <SwiperSlide key={i}>
-            <div className="w-full h-56 p-5 text-center  mb-2 px-8 flex  items-center justify-center">
+            <div className="w-full h-56  text-center  mb-2 p-5  mx-auto flex overflow-hidden  items-center justify-center">
               <span
                 style={{
                   backgroundImage: `url("https://img.freepik.com/free-vector/modern-flowing-colorful-wave-banner-background_1035-19861.jpg?semt=ais_hybrid")`,
                   backgroundRepeat: "no-repeat", // Prevent image repetition
                   backgroundSize: "cover", // Ensure the background image covers the entire div
                 }}
-                className="text-lg  p-5 rounded-md border border-[#7fb2ea] overflow-hidden w-[92%] h-full relative cursor-pointer flex justify-center group bg-white items-center font-semibold"
+                className="text-lg rounded-md border border-[#7fb2ea] overflow-hidden w-full h-full relative cursor-pointer flex justify-center group bg-white items-center font-semibold"
               >
                 {item}
                 <span className="w-full bg-sky-200 text-[#023f7f] absolute text-center -bottom-12 py-2 group-hover:bottom-0 transition-all duration-200">

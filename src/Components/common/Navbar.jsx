@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
-import { navData } from "../../../rawData";
-import Logo from "../../../assets/Logo.png";
+import { navData } from "../../rawData";
+import Logo from "../../assets/Logo.png";
 import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
@@ -65,12 +65,12 @@ export const Navbar = () => {
 
   return (
     <div
-      className={`fixed md:top-0 left-0 z-50 w-full transition-all duration-300 ${
-        isScrolledPastTop ? "bg-white shadow-md" : "bg-white md:bg-transparent"
+      className={`fixed lg:top-0 left-0 z-50 w-full transition-all duration-300 ${
+        isScrolledPastTop ? "bg-white shadow-md" : "bg-white lg:bg-transparent"
       }`}
       style={{ height: "80px", paddingBottom: "10px" }}
     >
-      <div className="flex justify-between md:justify-evenly items-center w-[90%] mx-auto h-full">
+      <div className="flex justify-between lg:justify-evenly items-center w-[96%] lg:w-[90%] mx-auto h-full">
         {/* Logo */}
         <Link to={"/"}>
           <img
@@ -82,7 +82,7 @@ export const Navbar = () => {
         </Link>
 
         {/* Desktop Navbar */}
-        <div className="hidden md:flex gap-6 text-[#023f7f] font-sans">
+        <div className="hidden lg:flex gap-6 text-[#023f7f] font-sans">
           {navData?.map((menu, index) => (
             <div
               key={index}
@@ -144,26 +144,30 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile Navbar */}
-        <div ref={mobileMenuRef} className="md:hidden">
+        <div ref={mobileMenuRef} className="lg:hidden ">
           <button onClick={toggleMobileMenu} className="p-2">
             {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
           <div
-            className={`absolute flex flex-col items-center bg-white shadow-lg w-full top-[80px] py-10 left-0 z-40 text-[#023f7f] font-sans transform transition-all duration-500 ease-in-out ${
+            className={`absolute flex flex-col items-center bg-white shadow-lg w-full top-[80px] py-6 left-0 z-40 text-[#023f7f] font-sans transform transition-all duration-500 ease-in-out ${
               isMobileMenuOpen
-                ? "opacity-100 scale-y-100 "
-                : "opacity-0 scale-y-0 "
+                ? "opacity-100 scale-y-100"
+                : "opacity-0 scale-y-0"
             }`}
+            style={{
+              maxHeight: "calc(100vh - 80px)", // Adjust the height to fit within the screen
+              overflowY: "auto", // Enable vertical scrolling
+            }}
           >
             {navData?.map((menu, index) => (
               <div key={index} className="relative group w-full">
                 <div
-                  className="flex justify-center items-center cursor-pointer"
+                  className="flex justify-center py-1 text-lg items-center cursor-pointer"
                   onClick={() =>
                     setOpenDropdown(openDropdown === index ? null : index)
                   }
                 >
-                  <span className="transition text-[#023f7f] opacity-100">
+                  <span className="transition  text-[#023f7f] opacity-100">
                     {menu.label}
                   </span>
                   <FaChevronDown
@@ -175,7 +179,7 @@ export const Navbar = () => {
 
                 {/* Dropdown Menu for Mobile */}
                 <div
-                  className={`w-full flex flex-col items-center mt-4 p-4 bg-slate-50 rounded-lg  transition-all duration-500 ease-in-out ${
+                  className={`w-full flex flex-col items-center py-1.5 bg-slate-50 transition-all duration-500 ease-in-out ${
                     openDropdown === index
                       ? "opacity-100 max-h-screen"
                       : "opacity-0 max-h-0 overflow-hidden"
@@ -184,7 +188,7 @@ export const Navbar = () => {
                   {menu.items.map((item, i) => (
                     <div key={i}>
                       {item.logo ? (
-                        <div className="mb-3">
+                        <div className="py-1.5">
                           <Link onClick={handleLinkClick} to={item.url}>
                             <img src={item.logo} alt="logo" width={60} />
                           </Link>
@@ -192,7 +196,7 @@ export const Navbar = () => {
                       ) : (
                         <Link
                           to={item?.url}
-                          className="block text-[#023f7f] py-2 hover:opacity-85 transition duration-200"
+                          className="block text-[#023f7f] py-1.5 hover:opacity-85 transition duration-200"
                           onClick={handleLinkClick}
                         >
                           {item?.text}
