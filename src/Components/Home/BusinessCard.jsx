@@ -42,7 +42,7 @@ const BusinessCard = ({ data, heading }) => {
       >
         {data.map((item, i) => (
           <SwiperSlide key={i}>
-            <div className="w-full h-56 p-5   mb-2 px-8 flex  items-center justify-center">
+            <div className="w-full h-56 p-5 text-center  mb-2 px-8 flex  items-center justify-center">
               <span
                 style={{
                   backgroundImage: `url("https://img.freepik.com/free-vector/modern-flowing-colorful-wave-banner-background_1035-19861.jpg?semt=ais_hybrid")`,

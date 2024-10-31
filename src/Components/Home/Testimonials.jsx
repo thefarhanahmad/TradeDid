@@ -1,3 +1,14 @@
+import React, { useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// Import required modules
+import { Pagination, Autoplay } from "swiper/modules";
+
 export default function Testimonial() {
   const testimonials = [
     {
@@ -27,43 +38,56 @@ export default function Testimonial() {
   ];
 
   return (
-    <div className="bg-[#e6f9ff] min-h-[60vh] py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-[#e6f9ff]  py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl h-full mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[#003366] mb-12">
           Trusted by professionals
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-between"
-            >
-              <div>
-                <h3 className="text-xl font-semibold text-[#003366]">
-                  {testimonial.name}
-                </h3>
-                <p className="text-sm text-gray-600">{testimonial.company}</p>
-                <p className="text-sm text-gray-600 mb-4">
-                  {testimonial.position}
-                </p>
-                <p className="text-sm text-gray-700 italic">
-                  {testimonial.testimonial}
-                </p>
-              </div>
-              <div className="mt-4 flex justify-end">
-                <img
-                  src={testimonial.logo}
-                  alt={`${testimonial.company} logo`}
-                  width={50}
-                  height={50}
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-          ))}
+        {/* Adjusted container to be full height */}
+        <div className=" overflow-hidden">
+          <Swiper
+            pagination={true}
+            modules={[Pagination, Autoplay]}
+            className="mySwiper h-full"
+            spaceBetween={0}
+            loop={true}
+            breakpoints={{
+              640: { slidesPerView: 1, spaceBetween: 20 },
+              768: { slidesPerView: 2, spaceBetween: 20 },
+              1024: { slidesPerView: 3, spaceBetween: 20 },
+            }}
+          >
+            {testimonials.map((testimonial, index) => (
+              <SwiperSlide key={index} className="h-full ">
+                <div className="bg-white  h-80 md:h-96 rounded-lg shadow-lg p-6 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-xl font-semibold text-[#003366]">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      {testimonial.company}
+                    </p>
+                    <p className="text-sm text-gray-600 mb-4">
+                      {testimonial.position}
+                    </p>
+                    <p className="text-sm text-gray-700 italic">
+                      {testimonial.testimonial}
+                    </p>
+                  </div>
+                  <div className="mt-4 flex self-end  w-32 rounded-full">
+                    <img
+                      src={testimonial.logo}
+                      alt={`${testimonial.company} logo`}
+                      className=""
+                    />
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
-      <div className="text-center text-[#003366] opacity-80 cursor-pointer text pt-4">
+      <div className="text-center text-[#003366] opacity-80 cursor-pointer pt-4">
         More success stories
       </div>
     </div>

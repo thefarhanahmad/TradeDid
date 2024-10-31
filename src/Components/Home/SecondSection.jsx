@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import ImageAnimation from "./ImageAnimation";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// Import required modules
+import { Pagination, Autoplay } from "swiper/modules";
 
 export default function SecondSection() {
   const data = [
@@ -57,7 +65,7 @@ export default function SecondSection() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
-    <div className="w-full ">
+    <div className="w-full overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 pb-8 py-16 md:py-20 font-sans">
         <header className="text-center px-1 mb-10">
           <h1 className="text-3xl font-bold mb-4 text-[#023f7f]">
@@ -68,47 +76,103 @@ export default function SecondSection() {
             The VoIP platform for telecommunication and business professionals
           </p>
         </header>
-
-        <div className="flex  w-full justify-center gap-4 mb-8">
-          {data?.map((feature, index) => (
-            <div
-              key={index}
-              onClick={() => setSelectedIndex(index)}
-              className={`relative cursor-pointer flex items-center justify-center p-4 w-[18%] md:h-44 h-44 ${
-                feature.bg
-              } ${
-                feature.text
-              } text-center font-bold text-lg md:text-xl rounded-xl transition-transform duration-200 ease-in-out ${
-                selectedIndex === index
-                  ? "-translate-y-2"
-                  : "hover:translate-y-[-8px]"
-              }`}
-            >
-              {feature.title}
+        {/* Large display view */}
+        <div className="hidden md:flex flex-col">
+          <div className="flex  w-full justify-center gap-4 mb-8">
+            {data?.map((feature, index) => (
+              <div
+                key={index}
+                onClick={() => setSelectedIndex(index)}
+                className={`relative cursor-pointer flex items-center justify-center p-4 w-[18%] md:h-44 h-44 ${
+                  feature.bg
+                } ${
+                  feature.text
+                } text-center font-bold text-lg md:text-xl rounded-xl transition-transform duration-200 ease-in-out ${
+                  selectedIndex === index
+                    ? "-translate-y-2"
+                    : "hover:translate-y-[-8px]"
+                }`}
+              >
+                {feature.title}
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col md:flex-row w-[96%] mx-auto text-[#023f7f] rounded-2xl overflow-hidden">
+            <div className="md:w-[60%]">
+              <img
+                src={data[selectedIndex].image}
+                alt={data[selectedIndex].heading}
+                width={600}
+                className="w-full h-[400px] object-cover"
+              />
             </div>
-          ))}
+            <div
+              className={`md:w-[40%] p-6 flex flex-col justify-center ${data[selectedIndex].bg} ${data[selectedIndex].text}`}
+            >
+              <h2 className="text-2xl font-bold mb-4">
+                {data[selectedIndex].heading}
+              </h2>
+              <p className="mb-4">{data[selectedIndex].description}</p>
+              <button className="bg-orange-500 text-white py-2 px-4 rounded-2xl self-start hover:bg-orange-600 transition-colors">
+                See our coverage
+              </button>
+            </div>
+          </div>
         </div>
-
-        <div className="flex flex-col md:flex-row w-[96%] mx-auto text-[#023f7f] rounded-2xl overflow-hidden">
-          <div className="md:w-[60%]">
-            <img
-              src={data[selectedIndex].image}
-              alt={data[selectedIndex].heading}
-              width={600}
-              className="w-full h-[400px] object-cover"
-            />
-          </div>
-          <div
-            className={`md:w-[40%] p-6 flex flex-col justify-center ${data[selectedIndex].bg} ${data[selectedIndex].text}`}
+        {/* Mobile Views swiper */}
+        <div className="flex md:hidden">
+          <Swiper
+            pagination={true}
+            modules={[Pagination, Autoplay]} // Add Autoplay module
+            className="mySwiper"
+            spaceBetween={0}
+            loop={true} // Enable looping
+            // autoplay={{
+            //   delay: 3000, // Time between slides (in milliseconds)
+            //   disableOnInteraction: false, // Allow autoplay to continue after user interactions
+            // }}
+            breakpoints={{
+              640: {
+                // For small devices
+                slidesPerView: 1, // 1 slide
+                spaceBetween: 0, // No space
+              },
+              768: {
+                // For medium devices (tablets)
+                slidesPerView: 1, // 1 slides
+                spaceBetween: 20, // Space between slides
+              },
+              1024: {
+                // For large devices (laptops and desktops)
+                slidesPerView: 3, // 3 slides
+                spaceBetween: 20, // Space between slides
+              },
+            }}
           >
-            <h2 className="text-2xl font-bold mb-4">
-              {data[selectedIndex].heading}
-            </h2>
-            <p className="mb-4">{data[selectedIndex].description}</p>
-            <button className="bg-orange-500 text-white py-2 px-4 rounded-2xl self-start hover:bg-orange-600 transition-colors">
-              See our coverage
-            </button>
-          </div>
+            {data?.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className="flex flex-col md:flex-row w-[96%] mx-auto text-[#023f7f] rounded-2xl overflow-hidden">
+                  <div className="md:w-[60%]">
+                    <img
+                      src={item?.image}
+                      alt={item?.heading}
+                      width={600}
+                      className="w-full h-[400px] object-cover"
+                    />
+                  </div>
+                  <div
+                    className={`md:w-[40%] p-6 flex flex-col justify-center ${item?.bg} ${item?.text}`}
+                  >
+                    <h2 className="text-2xl font-bold mb-4">{item?.heading}</h2>
+                    <p className="mb-4">{item?.description}</p>
+                    <button className="bg-orange-500 text-white py-2 px-4 rounded-2xl self-start hover:bg-orange-600 transition-colors">
+                      See our coverage
+                    </button>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>

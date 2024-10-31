@@ -16,7 +16,6 @@ const HomePage = () => {
 
       <SecondSection />
 
-      {/* Image animation */}
       <ImageAnimation />
       <EnterpriseCommunication />
       <Services />

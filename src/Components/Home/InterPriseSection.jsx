@@ -126,7 +126,7 @@ const EnterpriseCommunication = () => {
           />
         </div>
         <div
-          className={`h-full w-full px-10 md:mt-8 mt-0 md:p-0 text-center md:text-start md:w-[40%] transition-opacity duration-1000 ${
+          className={`h-full w-full px-10 md:mt-8 -mt-0 md:p-0 text-center md:text-start md:w-[40%] transition-opacity duration-1000 ${
             isSecondVisible ? "opacity-100" : "opacity-0"
           }`}
         >
