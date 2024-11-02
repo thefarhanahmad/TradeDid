@@ -1,8 +1,8 @@
 export default function QuoteRequest() {
   return (
-    <div className="py-16 h-[70vh] flex items-center justify-center bg-gradient-to-br from-yellow-50 to-orange-50 p-4">
+    <div className="py-12 flex items-center justify-center bg-gradient-to-br from-yellow-50 to-orange-50 p-4">
       <div className="  flex justify-between flex-col-reverse gap-10 md:gap-6 md:flex-row items-center rounded-3xl p-6 md:p-8 max-w-4xl w-full relative overflow-hidden">
-        <div className="  w-[50%] flex  flex-col items-center md:items-start gap-1">
+        <div className="  w-full md:w-[50%] flex  flex-col items-center md:items-start gap-1">
           <h2 className="text-3xl md:text-5xl font-bold mb-2">
             Request <span className="text-orange-500">a quote</span>
           </h2>
@@ -13,7 +13,7 @@ export default function QuoteRequest() {
             Get your quote
           </button>
         </div>
-        <div className=" flex  w-[50%] h-full  gap-0 ">
+        <div className=" flex w-full md:w-[50%] h-full  gap-0 ">
           <div className="w-[33%]    h-[9.5rem] relative overflow-hidden">
             <span className="bg-sky-400 w-14 h-14 absolute bottom-0 right-0 rounded-xl overflow-hidden"></span>
           </div>

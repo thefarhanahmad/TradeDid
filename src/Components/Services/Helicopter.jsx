@@ -1,6 +1,6 @@
 export default function Helicopter() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-300 to-blue-100 p-4 md:p-8">
+    <div className="bg-gradient-to-b from-orange-300 to-blue-100 px-4 md:px-8 py-12">
       <h1 className="mb-4  flex justify-center text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center">
         <div className="w-[80%] mx-auto">
           Making <span className="text-orange-500">Emergency calls</span>

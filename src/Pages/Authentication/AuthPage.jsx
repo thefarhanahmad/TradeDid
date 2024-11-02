@@ -14,7 +14,7 @@ const AuthPage = () => {
         </div>
       </div>
 
-      <div className=" min-h-full w-[100%] px-32 md:px-0 mx-auto md:w-[40%] bg-[#e6f9ff]">
+      <div className=" min-h-full w-[100%] px-0 sm:px-20 md:px-0 mx-auto md:w-[40%] bg-[#e6f9ff]">
         {/* buttons */}
         <div className=" flex justify-evenly pt-5 mb-5">
           <Link
@@ -40,7 +40,7 @@ const AuthPage = () => {
         </div>
 
         {/* form */}
-        <div className=" h-full pt-6 p-2 md:p-8">
+        <div className=" h-full  pt-6 p-2 md:p-8">
           <Outlet />
         </div>
       </div>

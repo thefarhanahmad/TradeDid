@@ -196,6 +196,7 @@ const DIDPricing = () => {
         subheading={
           "Experience DIDWW versatility with our customer-oriented approach"
         }
+        textClr={"text-[#023f7f]"}
         bgImg={
           "https://thumbs.dreamstime.com/b/world-map-design-white-background-environment-concept-earth-illustration-continents-vector-graphic-world-map-design-113872560.jpg"
         }

@@ -116,8 +116,7 @@ body {
   /* transform: translateY(-30%); Adjusts for vertical centering */
   cursor: pointer;
   z-index: 40; /* Ensures buttons appear on top */
-  width: 40px; /* Fixed width for a circular shape */
-  height: 40px; /* Fixed height for a circular shape */
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,10 +130,14 @@ body {
 
 .swiper-button-prev {
   left: 0px; /* Adjust position as needed */
+  width: 40px; /* Fixed width for a circular shape */
+  height: 40px; /* Fixed height for a circular shape */
 }
 
 .swiper-button-next {
   right: 0px; /* Adjust position as needed */
+  width: 40px; /* Fixed width for a circular shape */
+  height: 40px; /* Fixed height for a circular shape */
 }
 
 .swiper-slide img {
@@ -153,6 +156,17 @@ body {
 @media only screen and (max-width: 768px) {
   .swiper-slide {
     margin: 0px 0px; /* Adjust margin for smaller screens */
+  }
+  .swiper-button-prev {
+    left: 0px; /* Adjust position as needed */
+    width: 30px; /* Fixed width for a circular shape */
+    height: 30px; /* Fixed height for a circular shape */
+  }
+
+  .swiper-button-next {
+    right: 0px; /* Adjust position as needed */
+    width: 30px; /* Fixed width for a circular shape */
+    height: 30px; /* Fixed height for a circular shape */
   }
 }
 

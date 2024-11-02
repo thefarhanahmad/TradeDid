@@ -140,6 +140,7 @@ const RibbonIntegration = () => {
         preText={"Seamless interoperability with"}
         spanText={"Ribbon SBC"}
         nextText={""}
+        // textClr={"text-gray-800"}
         subheading={
           "Build your communications with DIDWW SIP Trunks and Ribbon’s SWe Edge & CNe Edge"
         }

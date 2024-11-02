@@ -189,6 +189,7 @@ const Networks = () => {
         subheading={
           "Reliable global network infrastructure for your business growth"
         }
+        textClr={"text-[#023f7f]"}
         bgImg={
           "https://plus.unsplash.com/premium_photo-1682320426935-f0614a9a6517?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnJpZGdlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D"
         }

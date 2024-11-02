@@ -136,6 +136,7 @@ const AllTools = () => {
       <TopSection
         preText={"Advanced"}
         spanText={"self-service tools"}
+        textClr={"text-gray-800"}
         nextText={"for telecommunication professionals"}
         subheading={"Carrier-grade cloud telephony for your business"}
         bgImg={"https://www.didww.com/_next/static/media/main.e85e2a11.jpg"}

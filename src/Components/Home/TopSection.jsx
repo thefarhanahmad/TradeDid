@@ -36,7 +36,7 @@ const TopSection = () => {
 
   return (
     <div
-      className="w-full relative bg-cover bg-center h-[80vh] pt-12 md:pt-0 md:h-screen overflow-hidden"
+      className="w-full relative flex justify-center items-center bg-cover bg-center h-[80vh] pt-12 md:pt-0 md:h-screen overflow-hidden"
       style={{
         backgroundImage:
           "url('https://www.didww.com/_next/static/media/main.58949e2c.webp')",
@@ -44,7 +44,7 @@ const TopSection = () => {
         transition: "transform 0.5s ease-in-out",
       }}
     >
-      <div className="p-8 text-white h-[72%] md:w-[69%] w-[100%]  mx-auto flex flex-col gap-4 justify-center items-center text-center md:text-start md:items-start">
+      <div className=" -mt-44 flex flex-col items-center justify-center gap-1">
         <h1 className="text-2xl md:text-5xl font-bold mb-2 text-[#023f7f]">
           Remove the boundaries
         </h1>
@@ -64,13 +64,13 @@ const TopSection = () => {
           </button>
         </div>
       </div>
-      <div className="absolute -right-20 hidden md:flex top-8 scale-75">
+      {/* <div className="absolute -right-20 hidden md:flex bottom-0 scale-75">
         <img
           className="object-cover scale-110"
           src="https://www.didww.com/_next/static/media/hill.b6949286.webp"
           alt="background"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

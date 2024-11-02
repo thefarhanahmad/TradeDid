@@ -157,6 +157,7 @@ const BusinessPhoneSystem = () => {
         preText={"A business phone system that is"}
         spanText={"simple "}
         nextText={"to set up"}
+        // textClr={"text-gray-800"}
         subheading={"Cloud-based PBX with an intuitive drag-and-drop interface"}
       />
       <DIDNumbersSection data={cardData} texts={texts} />

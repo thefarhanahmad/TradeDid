@@ -167,6 +167,7 @@ const Enterprise = () => {
         preText={"Business communications globally for your"}
         spanText={"enterprise"}
         nextText={""}
+        textClr={"text-[#023f7f]"}
         subheading={
           "Single contract for your Voice and SMS services in 91 countries"
         }
